@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
 }
-
+body.freeze{
+    overflow: hidden;
+}
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 $inputs_color: #AF3B59;
@@ -38,8 +40,11 @@ header {
         font-family: 'Open Sans', sans-serif;
         padding:15px 20px;
         border-bottom: 1px solid rgba(255, 255, 255, .25);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         a{
-            display: inline-block;
+            display: inline;
             margin: 0 15px;
         }
         .left{
@@ -161,13 +166,39 @@ header {
         top:9px;
     }
 }
+#filters_toggle{
+    display: none;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border: none;
+    z-index: 10;
+    width: 100%;
+    background-color: $inputs_color;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+}
 .filters{
     height: 590px;
+    width: 100%;
+    max-width: 250px;
     margin: 50px 0;
     border-radius: 10px;
     box-shadow: 0px 3px 20px 0px rgba(114, 74, 140, 0.18);
-    padding:10px;
+    padding:25px;
+    line-height: 20px;
+    .heading{
+        display: block;
+        font-size: 14px;
+        padding: 10px 0;
+    }
     input[type="text"]{
+        outline: none;
         width: 100%;
         border: 1px solid #D7D7D7;
         border-radius: 25px;
@@ -175,6 +206,7 @@ header {
     }
     .custom-radio-box{
         position: relative;
+        color: #a6a6a6;
         input[type="radio"]{
             opacity: 0;
             cursor: pointer;
@@ -214,10 +246,10 @@ header {
         }
     }
     .more-btn{
-        padding:10px 25px;
+        padding:5px 20px;
         color:#fff;
         background-color: $inputs_color;
-        border-radius: 15px;
+        border-radius: 10px;
     }
     .purple-btn{
         margin: 0 auto;
@@ -371,8 +403,8 @@ header {
         border-top: 1px solid #EDEDED;
         border-bottom: 1px solid #EDEDED;
         position: relative;
-        padding: 3px;
-        margin: 15px 0;
+        padding: 13px 3px;
+        margin: 0;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -380,8 +412,10 @@ header {
         &.recommended{
             background-image: url('../img/recommened_bg.png');
             background-repeat: no-repeat;
+            background-size: cover;
             box-shadow: 0px 3px 20px 0px rgba(114, 74, 140, 0.18);
-            border-radius: 10px;
+            border-radius: 25px;
+            margin: 15px 0;
             .job-img{
                 margin-left: 50px
             }
@@ -586,16 +620,43 @@ footer{
             }
         }
     }
+    .job-list{
+        .job-list-item{
+            .save-btn{
+                bottom:30px;
+                top: auto;
+            }
+        }
+    }
     
+    #filters_toggle{
+        display: block;
+        position: fixed;
+        bottom: 0;
+    }
     .filters{
+        position: fixed;
+        bottom: -200vh;
+        z-index: 9;
+        max-width: 500px;
+        left: 0;
+        right: 0;
         margin: 0 auto;
-        width: 400px;
+        height: 85%;
+        overflow: scroll;
+        width: 85%;
+        background-color: #fff;
+        transition: 300ms;
+        &.showed{
+            bottom: 60px;
+        }
         .more-btn{
             display: block;
             margin: 0 auto;
         }
     }
     .specialist-row{
+        text-align: center;
         .specialist-text{
             margin: 30px 0
         }
@@ -612,6 +673,21 @@ footer{
     .copyright{
         padding: 20px;
     }
+    #filters_mask{
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        opacity: .6;
+        position: fixed;
+        z-index: 7;
+        top: 0;
+        left: 0;
+        &.showed{
+            cursor: pointer;
+            display: block;
+        }
+    }
 }
 @media only screen and (max-width: 768px) {
     .btn{
@@ -627,6 +703,7 @@ footer{
             padding:15px 20px;
             border-bottom: 1px solid rgba(255, 255, 255, .25);
             display: block;
+            .btn{margin: 5px 0 ;}
             .first-line{
                 a{
                     padding: 0 5px;
@@ -669,7 +746,7 @@ footer{
         }
     }
     #about{
-        padding: 10px 40px;
+        padding: 40px 40px;
     }
     .job-list{
         .job-list-item{
@@ -692,6 +769,7 @@ footer{
         }
     }
     footer{
+        text-align: center;
         input{
             width: 70%;
         }
@@ -703,6 +781,19 @@ footer{
             .job-img{
                 display: none;
             }
+            }
+        }
+        .specialist-row {
+            input{
+                width: 210px;
+            }
+        }
+    }
+    @media only screen and (max-width: 385px) {
+        .job-list .job-list-item .little-info{
+            display:block;
+            div{
+                padding:5px 0;
             }
         }
     }

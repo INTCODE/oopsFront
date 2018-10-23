@@ -58,46 +58,50 @@
     </header>
     <main>
             <div class="row wrapper">
-                <div class="col-md-3 filters">
-                    <p class="text-input">
-                        <input type="text"><img src="./img/icons/search-gray.png" alt="">
-                    </p>
-                    <p>
-                        <span class="bold"> To work:</span><br>
-                        <label class="custom-radio-box"><input type="radio" name="work-type"><span class="custom-mark"></span> Remotely</label>
-                        <label class="custom-radio-box"><input type="radio" name="work-type"><span class="custom-mark"></span> On-Site</label>
-                    </p>
-                    <p>
-                        <span class="bold">Localization:</span><br>
-                        <label class="custom-radio-box"><input type="radio" name="localization"><span class="custom-mark"></span> All Cities<span class='amount float-right'>402</span></label>
-                        <button class="more-btn btn">+ more</button>
-                    </p>
-                    <p>
-                        <span class="bold">Experience level:</span><br>
-                        <label class="custom-radio-box"><input type="radio" name="experience"> <span class="custom-mark"></span>  All types <span class='amount float-right'>402</span></label>
-                        <label class="custom-radio-box"><input type="radio" name="experience"> <span class="custom-mark"></span>  Junior<span class='amount float-right'>402</span></label>
-                        <label class="custom-radio-box"><input type="radio" name="experience"> <span class="custom-mark"></span>  Middle<span class='amount float-right'>402</span></label>
-                        <label class="custom-radio-box"><input type="radio" name="experience"> <span class="custom-mark"></span>  Senior<span class='amount float-right'>402</span></label>
-                        <label class="custom-radio-box"><input type="radio" name="experience"> <span class="custom-mark"></span>  Leader<span class='amount float-right'>402</span></label>
-                    </p>
-                    <p><span class="bold">Salary:</span><br>
-                        <div class="custom-range">
-                            <input id="salary_range" type="range" value="50" min="10" max="100" step="5" data-rangeslider>
-                        </div>
-                        <span class="salary-subtext">$2 000</span> <span class="salary-subtext float-right">$16 000</span>
-                    </p>
-                    <p>
-                        <button class="purple-btn btn"><img src="./img/icons/search.svg" alt=""> search</button>
-                    </p>
-                </div>
-                <div class="col-md-9">
-                    <div class="head-panel">
-                        <p class="searched-job">Senior Software Developer</p>
-                        <span class="found-amount">402 offers found</span>
-                        <ul class="sort-btns-box">
-                            <li class="active"><img src="./img/icons/list_view.svg" alt=""></li>
-                            <li><img src="./img/icons/tiles_view.svg" alt=""></li>
-                            <li><img src="./img/icons/pin.png" alt=""></li>
+                <div class="col-md-3">
+                    <div id="filters_mask"></div>
+                    <button id="filters_toggle">Filters</button>
+                    <div class="filters">
+                        <p class="text-input">
+                            <input type="text"><img src="./img/icons/search-gray.png" alt="">
+                        </p>
+                        <p>
+                            <span class="heading"> To work:</span>
+                            <label class="custom-radio-box"><input type="radio" name="work-type"><span class="custom-mark"></span> Remotely</label>
+                            <label class="custom-radio-box"><input type="radio" name="work-type"><span class="custom-mark"></span> On-Site</label>
+                        </p>
+                        <p>
+                            <span class="heading">Localization:</span>
+                            <label class="custom-radio-box"><input type="radio" name="localization"><span class="custom-mark"></span> All Cities<span class='amount float-right'>402</span></label>
+                            <button class="more-btn btn">+ more</button>
+                        </p>
+                        <p>
+                            <span class="heading">Experience level:</span>
+                            <label class="custom-radio-box"><input type="radio" name="experience"> <span class="custom-mark"></span>  All types <span class='amount float-right'>402</span></label>
+                            <label class="custom-radio-box"><input type="radio" name="experience"> <span class="custom-mark"></span>  Junior<span class='amount float-right'>402</span></label>
+                            <label class="custom-radio-box"><input type="radio" name="experience"> <span class="custom-mark"></span>  Middle<span class='amount float-right'>402</span></label>
+                            <label class="custom-radio-box"><input type="radio" name="experience"> <span class="custom-mark"></span>  Senior<span class='amount float-right'>402</span></label>
+                            <label class="custom-radio-box"><input type="radio" name="experience"> <span class="custom-mark"></span>  Leader<span class='amount float-right'>402</span></label>
+                        </p>
+                        <p><span class="heading">Salary:</span>
+                            <div class="custom-range">
+                                <input id="salary_range" type="range" value="50" min="10" max="100" step="5" data-rangeslider>
+                            </div>
+                            <span class="salary-subtext">$2 000</span> <span class="salary-subtext float-right">$16 000</span>
+                        </p>
+                        <p>
+                            <button class="purple-btn btn"><img src="./img/icons/search.svg" alt=""> search</button>
+                        </p>
+                    </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="head-panel">
+                            <p class="searched-job">Senior Software Developer</p>
+                            <span class="found-amount">402 offers found</span>
+                            <ul class="sort-btns-box">
+                                <li class="active"><img src="./img/icons/list_view.svg" alt=""></li>
+                                <li><img src="./img/icons/tiles_view.svg" alt=""></li>
+                                <li><img src="./img/icons/pin.png" alt=""></li>
                         </ul>
                     </div>
                     <div class="job-list">
@@ -386,6 +390,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/rangeslider.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
     <script>$('input[type=range]').rangeslider({
             polyfill: false
           })</script>
