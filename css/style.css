@@ -13,7 +13,7 @@
   padding-right: 0; }
 
 .bold {
-  font-weight: bold; }
+  font-weight: 600; }
 
 body {
   font-size: 13px;
@@ -23,9 +23,13 @@ body {
 body.freeze {
   overflow: hidden; }
 
+a {
+  color: #47B4F7;
+  transition: 300ms; }
+
 a:hover {
   text-decoration: none;
-  color: #fff; }
+  color: #47B4F7; }
 
 .wrapper {
   margin: 0 auto;
@@ -208,6 +212,18 @@ header nav ul li.active {
   color: #fff;
   background-color: #8E77E1;
   border-radius: 7px; }
+
+.bold-top-blue {
+  padding-top: 20px !important;
+  background: -moz-linear-gradient(top, #47B4F7 0%, #47B4F7 7px, #ffffff 7px);
+  background: -webkit-linear-gradient(top, #47B4F7 0%, #47B4F7 7px, #ffffff 7px);
+  background: linear-gradient(to bottom, #47B4F7 0%, #47B4F7 7px, #ffffff 7px); }
+
+.bold-top-green {
+  padding-top: 20px !important;
+  background: -moz-linear-gradient(top, #19D363 0%, #19D363 7px, #ffffff 7px);
+  background: -webkit-linear-gradient(top, #19D363 0%, #19D363 7px, #ffffff 7px);
+  background: linear-gradient(to bottom, #19D363 0%, #19D363 7px, #ffffff 7px); }
 
 #filters_toggle {
   display: none;
@@ -394,7 +410,7 @@ header nav ul li.active {
   font-weight: 600; }
 
 .head-panel .found-amount {
-  color: #A6A6A6;
+  color: #a6a6a6;
   font-size: 13px; }
 
 .head-panel .sort-btns-box {
@@ -471,7 +487,7 @@ header nav ul li.active {
 
 .job-list .job-list-item .little-info {
   display: flex;
-  color: #A6A6A6;
+  color: #a6a6a6;
   font-size: 13px; }
 
 .job-list .job-list-item .little-info div {
@@ -717,14 +733,14 @@ footer .row button {
   padding: 20px 15px; }
 
 .apply-btn {
-  background-color: #19d363;
+  background-color: #19D363;
   width: 100%;
   text-align: center;
   justify-content: center;
   color: #fff; }
 
 .apply-btn .img-side-box {
-  background-color: #15b360; }
+  background-color: #15B360; }
 
 .offer-main-side .row {
   margin-top: -10px; }
@@ -735,7 +751,8 @@ footer .row button {
   border-radius: 20px;
   box-shadow: 0px 3px 20px 0px rgba(114, 74, 140, 0.18);
   padding: 10px 20px;
-  margin: 10px 5px; }
+  margin: 10px 5px;
+  overflow: hidden; }
 
 .info-box .heading {
   font-size: 16px;
@@ -813,16 +830,11 @@ footer .row button {
 .info-box .info-footer .arrow-right {
   margin-bottom: -15px; }
 
-.requirements {
-  background: -moz-linear-gradient(top, #47B4F7 0%, #47B4F7 7px, #ffffff 7px);
-  background: -webkit-linear-gradient(top, #47B4F7 0%, #47B4F7 7px, #ffffff 7px);
-  background: linear-gradient(to bottom, #47B4F7 0%, #47B4F7 7px, #ffffff 7px); }
-
 .requirements .heading {
-  padding: 15px 0 5px; }
+  padding-bottom: 10px; }
 
-.requirements .row {
-  justify-content: space-around; }
+.requirements .flex-box div {
+  width: 31%; }
 
 .skills-list {
   padding: 0;
@@ -911,7 +923,360 @@ footer .row button {
   width: 100%;
   z-index: 1; }
 
+.user-box {
+  padding-top: 0 !important;
+  text-align: center; }
+
+.user-box .info-header {
+  background-color: #8E77E1;
+  height: 130px;
+  position: relative; }
+
+.user-box .info-header .user-panel {
+  width: 210px;
+  height: 165px;
+  margin: 0 auto;
+  position: relative; }
+
+.user-box .info-header .user-panel .action-btn {
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  display: block;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; }
+
+.user-box .info-header .user-panel .action-btn#mail {
+  left: 0;
+  top: 65px; }
+
+.user-box .info-header .user-panel .action-btn#users {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 15px; }
+
+.user-box .info-header .user-panel .action-btn#exp {
+  right: 0;
+  top: 65px; }
+
+.user-box .info-header .user-panel .big-user-img {
+  padding-top: 80px; }
+
+.user-box .info-header #settings {
+  position: absolute;
+  right: 10px;
+  bottom: 10px; }
+
+.user-box .info-body {
+  padding-top: 60px; }
+
+.user-box .info-body .body-box {
+  width: 375px;
+  margin: 0 auto; }
+
+.user-box .info-body .name {
+  font-size: 18px;
+  padding-bottom: 3px; }
+
+.user-box .info-body .name .notification-box {
+  display: inline-block;
+  position: relative; }
+
+.user-box .info-body .name .notification-box .notification {
+  background-color: #E53935;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: -5px; }
+
+.user-box .info-body .position {
+  color: #a6a6a6;
+  padding-bottom: 20px; }
+
+.user-box .info-body .position a {
+  color: #a6a6a6;
+  text-decoration: underline; }
+
+.user-box .info-body .activity-box {
+  border-top: 1px solid #e5e5e5;
+  padding: 10px 0 0;
+  color: #a6a6a6; }
+
+.user-box .info-body .activity-box #activity-value {
+  color: #000;
+  font-weight: 600; }
+
+.user-box .info-body .activity-box .progress {
+  position: relative;
+  background-color: #D9DDE6;
+  height: 4px;
+  z-index: 2;
+  width: 200px;
+  margin: 0 auto; }
+
+.user-box .info-body .activity-box .progress .progress-bar {
+  width: 78%;
+  background-color: #3882FF; }
+
+.user-box .info-body .activity-box .progress .bars {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  z-index: 1; }
+
+.user-box .info-body .activity-box .progress .bars .bar {
+  position: absolute;
+  left: 20%;
+  border-radius: -50%;
+  background-color: white;
+  width: 5px;
+  height: 4px; }
+
+.user-box .info-body .activity-box .progress .bars .bar:nth-child(2) {
+  left: 40%; }
+
+.user-box .info-body .activity-box .progress .bars .bar:nth-child(3) {
+  left: 60%; }
+
+.user-box .info-body .activity-box .progress .bars .bar:nth-child(4) {
+  left: 80%; }
+
+.user-box .info-footer {
+  padding: 20px 20px 40px; }
+
+.user-box .info-footer .heading {
+  padding-bottom: 15px; }
+
+.user-box .info-footer .description {
+  color: #a6a6a6; }
+
+.user-list-box .user-list {
+  list-style: none;
+  padding: 0; }
+
+.user-list-box .user-list li {
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10px 0; }
+
+.user-list-box .user-list li .user-list-img {
+  padding-right: 15px; }
+
+.user-list-box .user-list li .user-list-img img {
+  height: 40px; }
+
+.user-list-box .user-list li .user-list-text .name {
+  font-weight: 600; }
+
+.user-list-box .user-list li .user-list-text .position {
+  color: #a6a6a6; }
+
+.user-list-box .lightpurple-btn {
+  margin: 0 auto;
+  box-shadow: none; }
+
+.contact {
+  padding: 20px 20px 5px; }
+
+.contact .flex-box {
+  padding: 0 0 15px; }
+
+.flex-box {
+  display: flex;
+  justify-content: space-between; }
+
+.exp-list {
+  padding: 0; }
+
+.exp-list li {
+  display: flex;
+  position: relative;
+  padding: 15px 0 0; }
+
+.exp-list li:not(:last-child) {
+  padding: 15px 0 25px;
+  border-bottom: 1px solid #e5e5e5; }
+
+.exp-list li .exp-img {
+  margin-right: 10px;
+  border: 1px solid #e5e5e5;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; }
+
+.exp-list li .name {
+  font-size: 14px;
+  padding: 10px 0 20px; }
+
+.exp-list li .date {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  color: #a6a6a6; }
+
+.exp-list li .description {
+  color: #a6a6a6;
+  max-width: 470px; }
+
+.connect .skills-list li .text {
+  width: 45%; }
+
+.connect .info-footer {
+  color: #a6a6a6;
+  padding: 10px 0; }
+
+.connect .info-footer .btn {
+  margin: 0 auto;
+  box-shadow: none; }
+
+.saved-jobs-list ul {
+  margin-top: -5px;
+  list-style: none;
+  padding: 0; }
+
+.saved-jobs-list ul li {
+  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 8px 0; }
+
+.saved-jobs-list ul li .name {
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 5px; }
+
+.saved-jobs-list ul li .name a {
+  font-weight: 400; }
+
+.saved-jobs-list ul li .details {
+  color: #a6a6a6; }
+
+.saved-jobs-list ul li .details .location {
+  padding: 0 45px 5px 20px;
+  position: relative; }
+
+.saved-jobs-list ul li .details .location::before {
+  content: url("../img/icons/place.png");
+  padding-right: 5px;
+  position: absolute;
+  left: 0px;
+  top: -3px; }
+
+.saved-jobs-list ul li .details .salary {
+  position: relative; }
+
+.saved-jobs-list ul li .details .salary::before {
+  content: url("../img/icons/salary.png");
+  position: absolute;
+  left: -25px;
+  top: -3px; }
+
+.saved-jobs-list ul li #delete-btn {
+  position: absolute;
+  right: 0;
+  top: 12px;
+  background-color: #e5e5e5;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icons/cross.svg");
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.saved-jobs-list .lightpurple-btn {
+  box-shadow: none;
+  margin: 0 auto; }
+
+.events {
+  padding: 20px 0; }
+
+.events .heading {
+  font-size: 17px; }
+
+.events .slider .slick-list {
+  max-width: 786px; }
+
+.events .slider .slide {
+  display: inline-block;
+  max-width: 220px;
+  padding: 0; }
+
+.events .slider .slide .img {
+  height: 122px;
+  overflow: hidden;
+  width: 100%; }
+
+.events .slider .slide .text {
+  padding: 10px; }
+
+.events .slider .slide .text .title {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 600; }
+
+.events .slider .slide .text .organizator {
+  color: #a6a6a6;
+  margin-bottom: 15px; }
+
+.events .slider .slide .text .details {
+  color: #a6a6a6; }
+
+.events .slider .slide .text .details .location {
+  padding-right: 45px; }
+
+.events .slider .slide .text .details div {
+  display: inline-block; }
+
+.events .slider .slide .text .status {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 10px;
+  padding-top: 10px;
+  font-size: 14px;
+  text-align: center; }
+
+.events .slider .slide .text .status .apply-btn {
+  padding: 5px 30px;
+  width: auto;
+  margin: 0 auto;
+  box-shadow: none; }
+
+.events .slider .slide .text .status p {
+  margin: 9px 0; }
+
 @media only screen and (max-width: 991px) {
+  .requirements .flex-box {
+    display: block; }
+  .requirements .flex-box > div {
+    width: 100%; }
+  .requirements .flex-box > div .dots {
+    width: auto; }
+  .contact .flex-box {
+    display: block;
+    text-align: center; }
+  .connect .skills-list li .text {
+    width: auto; }
+  .events .slider .slick-list {
+    max-width: 300px; }
   body {
     margin-bottom: 50px; }
   main {

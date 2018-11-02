@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/rangeslider.css">
+    <link rel="stylesheet" href="./css/slick.css">
 </head>
 <body>
     <header>
@@ -50,9 +51,8 @@
         </div>
         <div class="breadcrumbs">
             <div class="wrapper">
-                <a href="#">Job offers</a>
-                <a href="#">Senior offers</a>
-                <a class="active" href="#">Senior Ruby on Rails Developer</a>
+                <a href="#">All users</a>
+                <a class="active" href="#">Your profile</a>
             </div>
         </div>
         </div>
@@ -60,41 +60,46 @@
     <main>
         <div class="row wrapper">
             <div class="col-lg-8 offer-main-side">
-                <div class="info-box main-info-box">
+                <div class="info-box main-info-box user-box">
                     <div class="info-header">
-                        <p class="first-line"><span class="name">Senior Ruby on Rails Developer </span><span class="company"><span class="light-black">@</span> X-Team International</span></p>
-                        <p class="second-line">
-                            <span class="location">Warsaw</span>
-                            <span class="date">2017-07-20</span>
-                            <span class="salary">10 000 - 16 000 PLN netto</span>
-                            <span class="type">Remote work</span></p>
+                        <div class="user-panel">
+                            <a href="#" id="mail" class="action-btn"><img src="./img/icons/envelope.png" alt=""></a>
+                            <a href="#" id="users" class="action-btn"><img src="./img/icons/users.png" alt=""></a>
+                            <a href="#" id="exp" class="action-btn"><img src="./img/icons/briefcase.png" alt=""></a>
+                            <img class="big-user-img" src="./img/avatars/user1.png" alt="">
+                        </div>
+                        <a href="#" id="settings"><img src="./img//icons/gear.png" alt=""></a>
                     </div>
                     <div class="info-body">
-                        <div class="company-img">
-                            <img src="./img/logos/ibm_logo.png" alt="">
-                        </div>
-                        <div class="about-company">
-                            <div class="name">X Team International</div>
-                            <div class="description">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fusce ut tortor id dui, dolor sit amet.
+                        <div class="body-box">
+                            <div class="name">John Doe <div class="notification-box"><img src="./img/icons/bell.png" alt=""><span class="notification">2</span></div></div>
+                            <div class="position">
+                                Mid Android Developer w <a href="#">X-Team International</a>
                             </div>
-                            <div class="location">
-                                Warsaw, Remote, Warszawa
+                            <div class="activity-box">
+                                <p>Activity level: <span id="activity-value">78 %</span></p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="bars">
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="#">http://www.xTeminter.IT</a>
-                            <button class="lightpurple-btn btn">Company proflie</button>
                         </div>
                     </div>
                     <div class="info-footer">
-                        <span><img class="arrow-right" src="./img/arrow-right.png" alt=""></span>
-                        <button class="save-btn">Save</button>
+                        <p class="heading">About me</p>
+                        <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut tortor id dui rhoncus congue in non ex. Pellentesque nunc neque, ultricies vel lorem vitae, interdum tristique mauris.</div>
                     </div>
                 </div>
-                <div class="info-box requirements bold-top-blue">
-                    <p class="heading">Requirements</p>
+                <div class="info-box requirements bold-top-green">
+                    <p class="heading">Professional skills</p>
                     <div class="flex-box">
                         <div>
-                            <p class="heading">Must</p>
+                            <p class="heading">Pro</p>
                             <ul class="skills-list">
                                 <li>Ruby on Rails
                                     <div class="dots">
@@ -135,7 +140,7 @@
                             </ul>
                         </div>
                         <div>
-                            <p class="heading">Nice to have</p>
+                            <p class="heading">Medium</p>
                             <ul class="skills-list">
                                 <li>AWS
                                     <div class="dots">
@@ -164,24 +169,6 @@
                                         <span></span>
                                     </div>
                                 </li>
-                                <li>EvemtSourcing
-                                    <div class="dots">
-                                        <span class="full"></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </li>
-                                <li>Scrum
-                                    <div class="dots">
-                                        <span class="full"></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </li>
                             </ul>
                         </div>
                         <div>
@@ -196,283 +183,229 @@
                                         <span class="full"></span>
                                     </div>
                                 </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="info-box">
-                            <p class="heading">Essentials</p>
-                            <ul class="skills-list">
-                                <li>Location
-                                    <div class="text">
-                                        Wrocław POL
-                                    </div>
-                                </li>
-                                <li>Employment Type
-                                    <div class="text">
-                                        B2B Invoice
-                                    </div>
-                                </li>
-                                <li>Salary (without VAT)
-                                    <div class="text">
-                                        6500 - 8500 PLN / Month
-                                    </div>
-                                </li>
-                                <li>Start Date
-                                    <div class="text">
-                                        1.09.2017
-                                    </div>
-                                </li>
-                                <li>Project Industry
-                                    <div class="text">
-                                        Software House
-                                    </div>
-                                </li>
-                                <li>Company Size
-                                    <div class="text">
-                                        50+
-                                    </div>
-                                </li>
-                                <li>Project Team Size
-                                    <div class="text">
-                                        min. 5
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="info-box">
-                            <p class="heading">Work Methodology</p>
-                            <ul class="skills-list">
-                                <li>Issue Tracking Tool
-                                    <div class="text">
-                                        Jira
-                                    </div>
-                                </li>
-                                <li>Knowledge Repository
-                                    <div class="text">
-                                        Confluence
-                                    </div>
-                                </li>
-                                <li>Agile management
-                                    <div class="text">
-                                        Scrum
-                                    </div>
-                                </li>
-                                <li>Code Reviews
-                                    <div class="text">
-                                        Bitbucket
-                                    </div>
-                                </li>
-                                <li>Pair Programming
-                                    <div class="text">
-                                        -
-                                    </div>
-                                </li>
-                                <li>Unit Tests
-                                    <div class="text">
-                                        -
-                                    </div>
-                                </li>
-                                <li>Integration Tests
-                                    <div class="text">
-                                        -
-                                    </div>
-                                </li>
-                                <li>Build Server
-                                    <div class="text">
-                                        -
-                                    </div>
-                                </li>
-                                <li>Static Code Analysis
-                                    <div class="text">
-                                        Eslint
-                                    </div>
-                                </li>
-                                <li>Version Control System
-                                    <div class="text">
-                                        GIT
-                                    </div>
-                                </li>
-                                <li>Tester(s)
-                                    <div class="text">
-                                        1 person
-                                    </div>
-                                </li>
-                                <li>QA Manager
-                                    <div class="text">
-                                        1 person
-                                    </div>
-                                </li>
-                                <li>Freedom to choose tools
-                                    <div class="text">
-                                        -
-                                    </div>
-                                </li>
-                                <li>One command build possible?
-                                    <div class="text">
-                                        -
-                                    </div>
-                                </li>
-                                <li>Up and running within 2h?
-                                    <div class="text">
-                                        -
-                                    </div>
-                                <li>Commit on the first day?
-                                    <div class="text">
-                                        -
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="info-box">
-                            <p class="heading">Specs</p>
-                            <ul class="skills-list">
-                                <li>Workload
-                                    <div class="text">
-                                        80%
-                                    </div>
-                                </li>
-                                <li>Workweek
-                                    <div class="text">
-                                        40 hours
-                                    </div>
-                                </li>
-                                <li>Holiday
-                                    <div class="text">
-                                        20 / 26 days
-                                    </div>
-                                </li>
-                                <li>Office hours
-                                    <div class="text">
-                                        6 - 22
-                                    </div>
-                                </li>
-                                <li>Travel involved
-                                    <div class="text">
-                                        -
-                                    </div>
-                                </li>
-                                <li>Remote possible
-                                        <div class="text">
-                                            -
-                                        </div>
-                                </li>
-                                <li>Relocation package
-                                    <div class="text">
-                                        Yes
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="info-box">
-                            <p class="heading">One-on-one</p>
-                            <ul class="skills-list">
-                                <li>Regular employee evaluation?
-                                    <div class="text">
-                                        Yes
-                                    </div>
-                                </li>
-                                <li>Project change possible?
-                                    <div class="text">
-                                        Yes
-                                    </div>
-                                </li>
-                                <li>Who chooses architecture?
-                                    <div class="text">
-                                        Developers
-                                    </div>
-                                </li>
-                                <li>Who chooses technologies?
-                                    <div class="text">
-                                        Developers
-                                    </div>
-                                </li>
-                                <li>Who chooses conventions?
-                                    <div class="text">
-                                        Developers
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="info-box">
-                            <p class="heading">Job profile</p>
-                            <ul class="skills-list">
-                                <li>New features
-                                    <div class="text">
-                                        Warszawa POL
-                                    </div>
-                                </li>
-                                <li>Maintenance / Bug fixing
-                                    <div class="text">
-                                        B2B Invoice
-                                    </div>
-                                </li>
-                                <li>Client support
-                                    <div class="text">
-                                        6500 - 8500 PLN / Month
-                                    </div>
-                                </li>
-                                <li>Document writing
-                                    <div class="text">
-                                        1.09.2017
-                                    </div>
-                                </li>
-                                <li>Meetings
-                                    <div class="text">
-                                        Software House
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="info-box">
-                            <p class="heading">Equipment supplied</p>
-                            <ul class="skills-list">
-                                <li>Operating System
-                                    <div class="text">
-                                        Warszawa POL
-                                    </div>
-                                </li>
-                                <li>Computer
-                                    <div class="text">
-                                        Macbook
+                                <li>French
+                                    <div class="dots">
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span></span>
+                                        <span></span>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="info-box">
-                            <p class="heading">Technologies used</p>
-                            <ul class="skills-list list-horizontal">
-                                <li>Ruby on rails</li>
-                                <li>CSS</li>
-                                <li>HTML</li>
-                                <li>JavaScript</li>
-                            </ul>
-                        </div>
-                        <div class="map-box info-box">
-                            <div class="map-box-content">
-                                <div class="map-heading">
-                                    <p class="heading">Work location</p>
+                <div class="info-box contact bold-top-blue">
+                    <p class="heading">Contact</p>
+                    <div class="flex-box">
+                        <div><a href="#">www.john-andrioid.com</a></div>
+                        <div>Warsaw, Powiśle</div>
+                        <div>john_doe@gmail.com</div>
+                        <div>+48 555 666 777</div>
+                    </div>
+                </div>
+                <div class="info-box experience bold-top-blue">
+                    <p class="heading">Work Experience</p>
+                    <ul class="exp-list">
+                        <li>
+                            <div class="exp-img">
+                                <img src="./img/logos/exp-logo-1.png" alt="">
+                            </div>
+                            <div class="exp-content">
+                                <div class="name">
+                                    Mid Android Developer / <a href="#">X-Team International</a>
                                 </div>
-                                <div class="info-box">
-                                    <p class="heading">Are you interested in this offer?</p>
-                                    <div class="description">
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                    </div>
-                                    <div class="buttons">
-                                        <button class="btn apply-btn">Apply</button> or <button class="btn lightpurple-btn">Share</button>
-                                    </div>
+                                <div class="date">
+                                    Apr 2015 - now
+                                </div>
+                                <div class="description">
+                                    Lorem ipsum dolor sit amet, <span class="bold">consectetur adipiscing elit</span>. Fusce ut tortor id dui rhoncus congue in non ex.
                                 </div>
                             </div>
-                            <div id="map"></div>
+                        </li>
+                        <li>
+                            <div class="exp-img">
+                                <img src="./img/logos/exp-logo-1.png" alt="">
+                            </div>
+                            <div class="exp-content">
+                                <div class="name">
+                                    Junior Android Developer / <a href="#">X-Team International</a>
+                                </div>
+                                <div class="date">
+                                    Jun 2011 - Apr 2015
+                                </div>
+                                <div class="description">
+                                    Lorem ipsum dolor sit amet, <span class="bold">consectetur adipiscing elit</span>. Fusce ut tortor id dui rhoncus congue in non ex.
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="exp-img">
+                                <img src="./img/logos/exp-logo-2.png" alt="">
+                            </div>
+                            <div class="exp-content">
+                                <div class="name">
+                                    Android Developer Traine / <a href="#">Global Logic</a>
+                                </div>
+                                <div class="date">
+                                    Dec 2010 - Jun 2011
+                                </div>
+                                <div class="description">
+                                    Lorem ipsum dolor sit amet, <span class="bold">consectetur adipiscing elit</span>. Fusce ut tortor id dui rhoncus congue in non ex.
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="info-box bold-top-blue connect">
+                            <p class="heading">Connect</p>
+                            <ul class="skills-list">
+                                <li>Facebook
+                                    <div class="text">
+                                       <a href="https://www.facebook.com/">https://www.facebook.com/</a>
+                                    </div>
+                                </li>
+                                <li>Linkedin
+                                    <div class="text">
+                                       <a href="https://www.linkedin.com/">https://www.linkedin.com/</a>
+                                    </div>
+                                </li>
+                                <li>Twitter
+                                    <div class="text">
+                                       <a href="https://twitter.com/">https://twitter.com/</a>
+                                    </div>
+                                </li>
+                                <li>Github
+                                    <div class="text">
+                                       <a href="https://github.com/">https://github.com/</a>
+                                    </div>
+                                </li>
+                                <li>Stackoverflow
+                                    <div class="text">
+                                       <a href="https://stackoverflow.com/">https://stackoverflow.com/</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="info-footer">
+                                <div class="text">
+                                    Lorem ipsum dolor sit amet, <span class="bold">consectetur adipiscing elit</span>. Fusce ut tortor id dui rhoncus congue in non ex.
+                                </div>
+                            </div>
+                            <div class="info-footer">
+                                <button class="btn lightpurple-btn">Add new</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-box bold-top-blue saved-jobs-list">
+                            <p class="heading">Saved job offers</p>
+                            <ul>
+                                <li>
+                                    <div class="name">
+                                        Mid Android Developer / <a href="#">X-Team International</a>
+                                    </div>
+                                    <div class="details">
+                                        <span class="location">Warsaw</span>
+                                        <span class="salary">10k - 14k</span>
+                                    </div>
+                                    <button id="delete-btn"></button>
+                                </li>
+                                <li>
+                                    <div class="name">
+                                        Mid Android Developer / <a href="#">X-Team International</a>
+                                    </div>
+                                    <div class="details">
+                                        <span class="location">Warsaw</span>
+                                        <span class="salary">10k - 14k</span>
+                                    </div>
+                                    <button id="delete-btn"></button>
+                                </li>
+                                <li>
+                                    <div class="name">
+                                        Mid Android Developer / <a href="#">X-Team International</a>
+                                    </div>
+                                    <div class="details">
+                                        <span class="location">Warsaw</span>
+                                        <span class="salary">10k - 14k</span>
+                                    </div>
+                                    <button id="delete-btn"></button>
+                                </li>
+                                <li>
+                                    <div class="name">
+                                        Mid Android Developer / <a href="#">X-Team International</a>
+                                    </div>
+                                    <div class="details">
+                                        <span class="location">Warsaw</span>
+                                        <span class="salary">10k - 14k</span>
+                                    </div>
+                                    <button id="delete-btn"></button>
+                                </li>
+                            </ul>
+                            <button class="btn lightpurple-btn">More offers</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row events">
+                    <h2 class="heading">Your Events</h2>
+                    <div class="slider event-slider">
+                        <div class="slide info-box">
+                            <div class="img"><img src="./img/event1.png" alt=""></div>
+                            <div class="text">
+                                <p class="title">Deep Learning A-Z</p>
+                                <p class="organizator">IT Recruitment Specialist</p>
+                                <div class="details">
+                                    <div class="location">Warsaw</div>
+                                    <div class="date">2017-07-20</div>
+                                </div>
+                                <div class="status">
+                                    <button class="btn apply-btn">Register</button>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="slide info-box">
+                            <div class="img"><img src="./img/event2.png" alt=""></div>
+                            <div class="text">
+                                <p class="title">Complete Python Bootcamp</p>
+                                <p class="organizator">IT Recruitment Specialist</p>
+                                <div class="details">
+                                    <div class="location">Warsaw</div>
+                                    <div class="date">2017-07-20</div>
+                                </div>
+                                <div class="status">
+                                    <p>Registered</p>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="slide info-box">
+                            <div class="img"><img src="./img/event3.png" alt=""></div>
+                            <div class="text">
+                                <p class="title">Java Masterclass</p>
+                                <p class="organizator">IT Recruitment Specialist</p>
+                                <div class="details">
+                                    <div class="location">Warsaw</div>
+                                    <div class="date">2017-07-20</div>
+                                </div>
+                                <div class="status">
+                                    <p>Maybe</p>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="slide info-box">
+                            <div class="img"><img src="./img/event4.png" alt=""></div>
+                            <div class="text">
+                                <p class="title">Android Develop</p>
+                                <p class="organizator">IT Recruitment Specialist</p>
+                                <div class="details">
+                                    <div class="location">Warsaw</div>
+                                    <div class="date">2017-07-20</div>
+                                </div>
+                                <div class="status">
+                                    <p>Observe</p>
+                                </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -559,7 +492,68 @@
                 </div>
             </div>
             <div class="col-lg-4 offer-side-bar">
-                <a class="apply-btn btn" href=""><div class="img-side-box"><img src="./img/icons/write.png" alt=""></div>Apply Now</a>
+                <a class="apply-btn btn" href=""><div class="img-side-box"><img src="./img/icons/write.png" alt=""></div>Contact me</a>
+                <div class="info-box user-list-box">
+                    <p class="heading">Recently joined</p>
+                    <ul class="user-list">
+                        <li>
+                            <div class="user-list-img">
+                                <img src="./img//avatars/user1.png" alt="">
+                            </div>
+                            <div class="user-list-text">
+                                <div class="name">John Doe</div>
+                                <div class="position">
+                                    Senior Ruby on Rails Developer
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="user-list-img">
+                                <img src="./img//avatars/user2.png" alt="">
+                            </div>
+                            <div class="user-list-text">
+                                <div class="name">Christopher Duck</div>
+                                <div class="position">
+                                    Java Developer
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="user-list-img">
+                                <img src="./img//avatars/user3.png" alt="">
+                            </div>
+                            <div class="user-list-text">
+                                <div class="name">Katerine Doe</div>
+                                <div class="position">
+                                    Mid Android Developer
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="user-list-img">
+                                <img src="./img//avatars/user4.png" alt="">
+                            </div>
+                            <div class="user-list-text">
+                                <div class="name">Laurie Thomson</div>
+                                <div class="position">
+                                    Java Algorithm Engineer
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="user-list-img">
+                                <img src="./img//avatars/user5.png" alt="">
+                            </div>
+                            <div class="user-list-text">
+                                <div class="name">Andrew Polanksy</div>
+                                <div class="position">
+                                    Embedded Software Developer
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="btn lightpurple-btn">More users</button>
+                </div>
                 <p class="heading">Promoted offers</p>
                 <div class="info-box promoted">
                     <img src="./img/promoted-bg.png" alt="">
@@ -702,211 +696,25 @@
             </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/rangeslider.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBS6tmVf2ZBRkce6qB-qpWE3rMnzZKSUSM&callback=initMap"
-        async defer></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
     <script>
-    var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 50.053563, lng: 19.914709},
-          zoom: 10,
-          disableDefaultUI: true,
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
-          styles:[
-          {
-        "featureType": "water",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#e9e9e9"
-            },
-            {
-                "lightness": 17
-            }
-        ]
-    },
+        $('.slider').slick({
+          infinite: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: false,
+          responsive: [
     {
-        "featureType": "landscape",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#f5f5f5"
-            },
-            {
-                "lightness": 20
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            },
-            {
-                "lightness": 17
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            },
-            {
-                "lightness": 29
-            },
-            {
-                "weight": 0.2
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            },
-            {
-                "lightness": 18
-            }
-        ]
-    },
-    {
-        "featureType": "road.local",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            },
-            {
-                "lightness": 16
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#f5f5f5"
-            },
-            {
-                "lightness": 21
-            }
-        ]
-    },
-    {
-        "featureType": "poi.park",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#dedede"
-            },
-            {
-                "lightness": 21
-            }
-        ]
-    },
-    {
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#ffffff"
-            },
-            {
-                "lightness": 16
-            }
-        ]
-    },
-    {
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "saturation": 36
-            },
-            {
-                "color": "#333333"
-            },
-            {
-                "lightness": 40
-            }
-        ]
-    },
-    {
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#f2f2f2"
-            },
-            {
-                "lightness": 19
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#fefefe"
-            },
-            {
-                "lightness": 20
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#fefefe"
-            },
-            {
-                "lightness": 17
-            },
-            {
-                "weight": 1.2
-            }
-        ]
-    }
-          ]
-        });
+      breakpoint: 991,
+      settings: {
+        infinite: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
       }
-
+    }]
+        });
     </script>
-    <script>$('input[type=range]').rangeslider({
-            polyfill: false
-          })</script>
-    <style>
-        a[href^="http://maps.google.com/maps"]{display:none !important}
-a[href^="https://maps.google.com/maps"]{display:none !important}
-
-.gmnoprint a, .gmnoprint span, .gm-style-cc {
-    display:none;
-}
-.gmnoprint div {
-    background:none !important;
-}
-    </style>
 </body>
 </html>
