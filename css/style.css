@@ -530,7 +530,6 @@ header nav ul li.active {
 
 .specialist-row {
   margin: 0 0 40px;
-  width: 100%;
   background-image: url(../img/specialist_bg.png);
   background-position: center;
   color: #fff; }
@@ -1315,6 +1314,7 @@ footer .row button {
     display: block;
     margin: 0 auto; }
   .specialist-row {
+    margin: 0 -10px 40px;
     text-align: center; }
   .specialist-row .specialist-text {
     margin: 30px 0; }
@@ -1323,6 +1323,7 @@ footer .row button {
   .specialist-row input {
     width: 230px; }
   #about {
+    margin: 0 -10px;
     background-size: cover;
     padding: 60px 90px; }
   .copyright {
