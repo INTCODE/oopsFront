@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oops Jobs</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/rangeslider.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <span class="left">
+                <a><img src="./img/icons/bars.svg" alt=""></a>
+                <a><img src="./img/icons/home.png" alt=""></a>
+            </span>
+            <span class="float-right">
+                <a class="white-btn btn" href=""><div class="img-side-box"><img src="./img/icons/employer.png" alt=""></div>For employers</a>
+                <a class="purple-btn btn" href=""><div class="img-side-box"><img src="./img/icons/write.png" alt=""></div>Post a job</a>
+                <a href=""><img src="./img/icons/ring.png" alt=""></a>
+                <a class="user" href=""><img src="./img/icons/user.png" alt="">John Doe</a>
+            </span>
+        </div>
+        <div class="mobile-top-bar">
+            <div class="first-line">
+                <a href="#"><img src="./img/icons/bars.svg" alt=""></a>
+                <a href="#"><img src="./img/icons/home.png" alt=""></a>
+                <span class="float-right">
+                    <a href="#"><img src="./img/icons/ring.png" alt=""></a>
+                    <a class="user" href=""><img src="./img/icons/user.png" alt="">John Doe</a>
+                </span>
+            </div>
+            <div class="second-line text-center">
+                <a class="white-btn btn" href=""><div class="img-side-box"><img src="./img/icons/employer.png" alt=""></div>For employers</a>
+                <a class="purple-btn btn" href=""><div class="img-side-box"><img src="./img/icons/write.png" alt=""></div>Post a job</a>
+            </div>
+
+        </div>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="search-box">
+            <img class="logo" src="./img/logo.png" alt="">
+            <div class="search-bar">
+                <input type="text" placeholder="@Senior Software Developer, Warsaw">
+                <button><img src="./img/icons/settings.png" alt=""></button>
+            </div>
+        </div>
+        <div class="breadcrumbs">
+            <div class="wrapper">
+                <a href="#">Job offers</a>
+                <a href="#">Senior offers</a>
+                <a class="active" href="#">Senior Ruby on Rails Developer</a>
+            </div>
+        </div>
+        </div>
+    </header>
+    <main>
+        <div class="row wrapper">
+            <div class="col-lg-8 order-sm-2 order-lg-1 offer-main-side">
+                <h3 class="page-heading">Adding an offer</h3>
+                <span class="add-component-user-email">john.doe@gmail.com</span>
+                <div class="row">
+                <div class="col-12 components">
+                <div class="info-box main-component bold-top-purple component">
+                    <div class="info-header">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>
+                                    Profession <span class="primary-color">*</span>
+                                    <input type="text">
+                                </label>
+                                <label>
+                                    Company <span class="primary-color">*</span>
+                                    <input type="text">
+                                </label>
+                                <label>
+                                    URL <span class="primary-color">*</span>
+                                    <input type="text" class="url-input">
+                                </label>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Employers</label>
+                            <ul class="add-employers-list">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="info-body">
+                            <div class="row">
+                        <div class="col-md-6">
+                            <label>
+                                Location<span class="primary-color">*</span>
+                                <input type="text">
+                            </label>
+                            <label>
+                                Employment Type<span class="primary-color">*</span>
+                                <select>
+                                    <option value="1">- Select -</option>
+                                    <option value="2">B2B Invoice</option>
+                                    <option value="3">B2B Invoice</option>
+                                    <option value="4">B2B Invoice</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="col-md-6">
+                            <label>
+                                Type of Work<span class="primary-color">*</span>
+                                <select>
+                                    <option value="1">- Select -</option>
+                                    <option value="2">Remote</option>
+                                    <option value="3">Remote</option>
+                                    <option value="4">Remote</option>
+                                </select>
+                            </label>
+                            <label class="two-input-line">
+                                Salary<span class="primary-color">*</span><br>
+                                <div>
+                                    <input type="text" class="mr-3">
+                                    <input type="text">
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="info-footer">
+                        <span>
+                            <span class="primary-color">*</span> - required fields
+                        </span>
+                        <span>
+                            <button class="btn cancel-btn">Cancel</button>
+                            <button class="btn lightpurple-btn">Save</button>
+                        </span>
+                    </div>
+                </div>
+                    <div class="info-box add-new-component">
+                            <p><button class="plus-circle"></button> Add next component</p>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="map-box info-box">
+                            <div class="map-box-content">
+                                <div class="map-heading">
+                                    <p class="heading">Work location</p>
+                                </div>
+                                <div class="info-box">
+                                    <p class="heading">Are you interested in this offer?</p>
+                                    <div class="description">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                    </div>
+                                    <div class="buttons">
+                                        <button class="btn apply-btn">Apply</button> or <button class="btn lightpurple-btn">Share</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="job-list">
+                    <h4>Newest jobs</h4>
+                    <div class="job-list-item ">
+                        <div class="job-img">
+                            <img src="./img/logos/logo_1.png" alt="">
+                        </div>
+                        <div class="job-details">
+                            <div class="name">Senior Ruby on Rails Developer</div>
+                            <div class="company">@ X-Team International</div>
+                            <div class="little-info">
+                                <div class="place">Warsaw</div>
+                                <div class="salary">10k - 14k</div>
+                                <div class="date">2018-08-27</div>
+                            </div>
+                            <button class="save-btn">Save</button>
+                        </div>
+                    </div>
+                    <div class="job-list-item ">
+                        <div class="job-img">
+                            <img src="./img/logos/logo_1.png" alt="">
+                        </div>
+                        <div class="job-details">
+                            <div class="name">Senior Ruby on Rails Developer</div>
+                            <div class="company">@ X-Team International</div>
+                            <div class="little-info">
+                                <div class="place">Warsaw</div>
+                                <div class="salary">10k - 14k</div>
+                                <div class="date">2018-08-27</div>
+                            </div>
+                            <button class="save-btn">Save</button>
+                        </div>
+                    </div>
+                    <div class="job-list-item ">
+                        <div class="job-img">
+                            <img src="./img/logos/logo_1.png" alt="">
+                        </div>
+                        <div class="job-details">
+                            <div class="name">Senior Ruby on Rails Developer</div>
+                            <div class="company">@ X-Team International</div>
+                            <div class="little-info">
+                                <div class="place">Warsaw</div>
+                                <div class="salary">10k - 14k</div>
+                                <div class="date">2018-08-27</div>
+                            </div>
+                            <button class="save-btn">Save</button>
+                        </div>
+                    </div>
+                    <div class="job-list-item ">
+                        <div class="job-img">
+                            <img src="./img/logos/logo_1.png" alt="">
+                        </div>
+                        <div class="job-details">
+                            <div class="name">Senior Ruby on Rails Developer</div>
+                            <div class="company">@ X-Team International</div>
+                            <div class="little-info">
+                                <div class="place">Warsaw</div>
+                                <div class="salary">10k - 14k</div>
+                                <div class="date">2018-08-27</div>
+                            </div>
+                            <button class="save-btn">Save</button>
+                        </div>
+                    </div>
+                    <div class="job-list-item ">
+                        <div class="job-img">
+                            <img src="./img/logos/logo_1.png" alt="">
+                        </div>
+                       <div class="job-details">
+                           <div class="name">Senior Ruby on Rails Developer</div>
+                           <div class="company">@ X-Team International</div>
+                           <div class="little-info">
+                               <div class="place">Warsaw</div>
+                               <div class="salary">10k - 14k</div>
+                               <div class="date">2018-08-27</div>
+                           </div>
+                           <button class="save-btn">Save</button>
+                       </div>
+                    </div>
+                    <div class="more-jobs-btn">
+                        <button class="purple-btn btn" href="#"><div class="img-side-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/></svg></div> More jobs</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 order-sm-1 order-lg-2 offer-side-bar">
+                <div class="user-list-box">
+                    <div class="heading">Recommended 
+                        <span>
+                        <img class="list-img" src="./img//icons/list_view.svg" alt="">
+                        <div class="panel">
+                            <div class="panel-item active">
+                                <img src="./img/icons/user.png" alt="">
+                            </div>
+                            <div class="panel-item">
+                                <img src="./img/icons/settings2.png" alt="">
+                            </div>
+                        </div>
+                        </span>
+                    </div>
+                    <ul class="user-list recommended">
+                        <li>
+                            <div class="user-list-img">
+                                <img src="./img//avatars/user1.png" alt="">
+                            </div>
+                            <div class="user-list-text">
+                                <div class="name">Marcin</div>
+                                <div class="position">
+                                    Senior Ruby on Rails Developer
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="user-list-img">
+                                <img src="./img//avatars/user1.png" alt="">
+                            </div>
+                            <div class="user-list-text">
+                                <div class="name">Aleksander</div>
+                                <div class="position">
+                                    Senior Ruby on Rails Developer
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="user-list-img">
+                                <img src="./img//avatars/user1.png" alt="">
+                            </div>
+                            <div class="user-list-text">
+                                <div class="name">Bartek</div>
+                                <div class="position">
+                                    Senior Ruby on Rails Developer
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="user-list-img">
+                                <img src="./img//avatars/user1.png" alt="">
+                            </div>
+                            <div class="user-list-text">
+                                <div class="name">Kasia</div>
+                                <div class="position">
+                                    Senior Ruby on Rails Developer
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="user-list-img">
+                                <img src="./img//avatars/user1.png" alt="">
+                            </div>
+                            <div class="user-list-text">
+                                <div class="name">Marcin</div>
+                                <div class="position">
+                                    Senior Ruby on Rails Developer
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="user-list-img">
+                                <img src="./img//avatars/user1.png" alt="">
+                            </div>
+                            <div class="user-list-text">
+                                <div class="name">Marcin</div>
+                                <div class="position">
+                                    Senior Ruby on Rails Developer
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="user-list-img">
+                                <img src="./img//avatars/user1.png" alt="">
+                            </div>
+                            <div class="user-list-text">
+                                <div class="name">Marcin</div>
+                                <div class="position">
+                                    Senior Ruby on Rails Developer
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper">
+        <div class="partners">
+            <h2>Most effective companies:</h2>
+            <div class="companies">
+                <img src="./img//partners.png" alt="">
+            </div>
+        </div>
+        <div class="row footer-grid">
+            <div class="col-md-3 col-sm-6">
+                <h3>oopsjobs.com</h3>
+                <p>Lorem ipsum dolor sit amet, onseur adipiscing elit. Vivaasdmus aliquam.</p>
+
+                <p>Vivamus placerat, nulla sed sollicitud tempus, libero neque porttitor turpis,
+                vitae vestibulum velit.</p>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h3>Lastest offers</h3>
+                <ul>
+                    <li><a href="#">Junior Ruby on Rails</a></li>
+                    <li><a href="#">Python Developer</a></li>
+                    <li><a href="#">Senior HTML / CSS Dev</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <h3>Lorem ipsum</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Job offers</a></li>
+                    <li><a href="#">Orders</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <h3>Subscribe!</h3>
+                <p>
+                    Vivamus placerat, nulla sed sollicitud tempus, libero neque porttitor.
+                </p>
+                <input placeholder="john.doe@gmail.com" type="text"><button><img src="./img//icons/send.png" alt=""></button>
+            </div>
+        </div>
+    </div>
+    </footer>
+            <div class="copyright wrapper">
+                <span>© copyright 2018 oopsjobs.com</span>
+                <span class="float-right">
+                    <a href="#"><img src="./img/icons/facebook-f.svg" alt="facebook"></a>
+                    <a href="#"><img src="./img/icons/google-plus-g.svg" alt="google"></a>
+                    <a href="#"><img src="./img/icons/linkedin-in.svg" alt="linkedin"></a>
+                    <a href="#"><img src="./img/icons/twitter.svg" alt="twitter"></a>
+                </span>
+            </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/rangeslider.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBS6tmVf2ZBRkce6qB-qpWE3rMnzZKSUSM&callback=initMap"
+        async defer></script>
+    <script>
+    var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 50.053563, lng: 19.914709},
+          zoom: 10,
+          disableDefaultUI: true,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          styles:[
+          {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#e9e9e9"
+            },
+            {
+                "lightness": 17
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#f5f5f5"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 17
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 29
+            },
+            {
+                "weight": 0.2
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 18
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#f5f5f5"
+            },
+            {
+                "lightness": 21
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#dedede"
+            },
+            {
+                "lightness": 21
+            }
+        ]
+    },
+    {
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "saturation": 36
+            },
+            {
+                "color": "#333333"
+            },
+            {
+                "lightness": 40
+            }
+        ]
+    },
+    {
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#f2f2f2"
+            },
+            {
+                "lightness": 19
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#fefefe"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#fefefe"
+            },
+            {
+                "lightness": 17
+            },
+            {
+                "weight": 1.2
+            }
+        ]
+    }
+          ]
+        });
+      }
+
+    </script>
+    <script>$('input[type=range]').rangeslider({
+            polyfill: false
+          })</script>
+    <style>
+        a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
+    </style>
+</body>
+</html>
