@@ -253,6 +253,11 @@ header {
     background: -webkit-linear-gradient(top, $primary_color 0%, $primary_color 7px,#ffffff 7px);
     background: linear-gradient(to bottom, $primary_color 0%, $primary_color 7px,#ffffff 7px);
 }
+.outsite-heading{
+    padding: 30px 0 10px 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
 #filters_toggle{
     display: none;
     bottom: 0;
@@ -811,7 +816,6 @@ footer{
     }
     &.main-info-box{
         padding: 20px 0;
-        margin-top: 35px;
     }
     .info-header{
         padding: 0 30px;
@@ -1028,7 +1032,7 @@ footer{
             #settings{
                position: absolute;
                right: 10px;
-               bottom: 10px; 
+               bottom: 10px;
             }
     }
     .info-body{
@@ -1127,6 +1131,7 @@ footer{
     }
 }
 .user-list-box{
+    padding: 20px;
     .heading{
         display: flex;
         align-items: center;
@@ -1165,7 +1170,7 @@ footer{
             border-bottom: 1px solid $lightgray;
             padding: 10px 0;
             .user-list-img{
-                padding-right: 15px; 
+                padding-right: 15px;
                 img{
                     height: 40px;
                 }
@@ -1213,7 +1218,7 @@ footer{
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 50%;        
+            border-radius: 50%;
         }
         .name{
             font-size: 14px;
@@ -1310,7 +1315,7 @@ footer{
             margin: 0 auto;
         }
 }
-.events{
+.slider-box{
     padding: 20px 0;
     .heading{
         font-size:17px;
@@ -1351,7 +1356,7 @@ footer{
                     .date{
                         &::before{
                             // content: url('../img/icons/clock.png');
-                            
+
                         }
                     }
                     div{
@@ -1393,7 +1398,7 @@ footer{
         padding-left: 33%;
     }
     .components{
-        height: 1600px;
+        // height: 1600px;
     }
     .add-new-component{
         background-image: url('../img/recommened_bg.png');
@@ -1412,7 +1417,7 @@ footer{
                 height: 40px;
                 display: inline-block;
                 background-image: url('../img/icons/plus.svg');
-                background-size: 20px; 
+                background-size: 20px;
                 background-repeat: no-repeat;
                 background-position: center center;
                 margin-right: 10px;
@@ -1530,6 +1535,20 @@ footer{
         }
     }
 // ADD END
+// TESTS START
+.info-box .info-body{
+    display: block;
+    .job-list-item{
+        width: 70%;
+        margin: 0 auto;
+        border:1px solid $lightgray;
+        box-shadow: 0px 0px 24px $lightgray;
+    }
+}
+.accepting-box{
+    text-align: left;
+}
+// TESTS END
 @media only screen and (max-width: 991px) {
     .requirements{
         .flex-box{
@@ -1557,7 +1576,7 @@ footer{
             }
         }
     }
-    .events{
+    .slider-box{
         .slider{
             .slick-list{
                 max-width: 300px;

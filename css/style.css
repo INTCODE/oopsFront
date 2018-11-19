@@ -241,6 +241,11 @@ header nav ul li.active {
   background: -webkit-linear-gradient(top, #8E77E1 0%, #8E77E1 7px, #ffffff 7px);
   background: linear-gradient(to bottom, #8E77E1 0%, #8E77E1 7px, #ffffff 7px); }
 
+.outsite-heading {
+  padding: 30px 0 10px 10px;
+  font-size: 18px;
+  font-weight: 600; }
+
 #filters_toggle {
   display: none;
   bottom: 0;
@@ -775,8 +780,7 @@ footer .row button {
   margin-bottom: 10px; }
 
 .info-box.main-info-box {
-  padding: 20px 0;
-  margin-top: 35px; }
+  padding: 20px 0; }
 
 .info-box .info-header {
   padding: 0 30px;
@@ -1080,6 +1084,9 @@ footer .row button {
 .user-box .info-footer .description {
   color: #a6a6a6; }
 
+.user-list-box {
+  padding: 20px; }
+
 .user-list-box .heading {
   display: flex;
   align-items: center;
@@ -1250,60 +1257,60 @@ footer .row button {
   box-shadow: none;
   margin: 0 auto; }
 
-.events {
+.slider-box {
   padding: 20px 0; }
 
-.events .heading {
+.slider-box .heading {
   font-size: 17px; }
 
-.events .slider .slick-list {
+.slider-box .slider .slick-list {
   max-width: 786px; }
 
-.events .slider .slide {
+.slider-box .slider .slide {
   display: inline-block;
   max-width: 220px;
   padding: 0; }
 
-.events .slider .slide .img {
+.slider-box .slider .slide .img {
   height: 122px;
   overflow: hidden;
   width: 100%; }
 
-.events .slider .slide .text {
+.slider-box .slider .slide .text {
   padding: 10px; }
 
-.events .slider .slide .text .title {
+.slider-box .slider .slide .text .title {
   margin-bottom: 0;
   font-size: 14px;
   font-weight: 600; }
 
-.events .slider .slide .text .organizator {
+.slider-box .slider .slide .text .organizator {
   color: #a6a6a6;
   margin-bottom: 15px; }
 
-.events .slider .slide .text .details {
+.slider-box .slider .slide .text .details {
   color: #a6a6a6; }
 
-.events .slider .slide .text .details .location {
+.slider-box .slider .slide .text .details .location {
   padding-right: 45px; }
 
-.events .slider .slide .text .details div {
+.slider-box .slider .slide .text .details div {
   display: inline-block; }
 
-.events .slider .slide .text .status {
+.slider-box .slider .slide .text .status {
   border-top: 1px solid #e5e5e5;
   margin-top: 10px;
   padding-top: 10px;
   font-size: 14px;
   text-align: center; }
 
-.events .slider .slide .text .status .apply-btn {
+.slider-box .slider .slide .text .status .apply-btn {
   padding: 5px 30px;
   width: auto;
   margin: 0 auto;
   box-shadow: none; }
 
-.events .slider .slide .text .status p {
+.slider-box .slider .slide .text .status p {
   margin: 9px 0; }
 
 .page-heading {
@@ -1317,9 +1324,6 @@ footer .row button {
   font-size: 15px;
   display: inline-block;
   padding-left: 33%; }
-
-.components {
-  height: 1600px; }
 
 .add-new-component {
   background-image: url("../img/recommened_bg.png");
@@ -1453,6 +1457,18 @@ footer .row button {
 .panel .panel-item.active {
   background-color: #8E77E1; }
 
+.info-box .info-body {
+  display: block; }
+
+.info-box .info-body .job-list-item {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0px 0px 24px #e5e5e5; }
+
+.accepting-box {
+  text-align: left; }
+
 @media only screen and (max-width: 991px) {
   .requirements .flex-box {
     display: block; }
@@ -1465,7 +1481,7 @@ footer .row button {
     text-align: center; }
   .connect .skills-list li .text {
     width: auto; }
-  .events .slider .slick-list {
+  .slider-box .slider .slick-list {
     max-width: 300px; }
   body {
     margin-bottom: 50px; }
