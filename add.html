@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dragula.css">
     <link rel="stylesheet" href="./css/rangeslider.css">
 </head>
 <body>
@@ -83,17 +84,17 @@
                         </div>
                         <div class="col-md-6">
                             <label>Employers</label>
-                            <ul class="add-employers-list">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                            <ul class="add-employers-list" id="dragula_left">
+                                <li class="empty-slot"></li>
+                                <li class="empty-slot"></li>
+                                <li class="empty-slot"></li>
+                                <li class="empty-slot"></li>
+                                <li class="empty-slot"></li>
+                                <li class="empty-slot"></li>
+                                <li class="empty-slot"></li>
+                                <li class="empty-slot"></li>
+                                <li class="empty-slot"></li>
+                                <li class="empty-slot"></li>
                             </ul>
                         </div>
                     </div>
@@ -146,7 +147,7 @@
                     </div>
                 </div>
                     <div class="info-box add-new-component">
-                            <p><button class="plus-circle"></button> Add next component</p>
+                            <p class="add-new-component-p"><button class="plus-circle"></button> Add next component</p>
                     </div>
                 </div>
                 </div>
@@ -268,8 +269,8 @@
                         </div>
                         </span>
                     </div>
-                    <ul class="user-list recommended">
-                        <li>
+                    <ul class="user-list recommended" id="dragula_right">
+                        <li class="recommended-user">
                             <div class="user-list-img">
                                 <img src="./img//avatars/user1.png" alt="">
                             </div>
@@ -280,7 +281,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="recommended-user">
                             <div class="user-list-img">
                                 <img src="./img//avatars/user1.png" alt="">
                             </div>
@@ -291,7 +292,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="recommended-user">
                             <div class="user-list-img">
                                 <img src="./img//avatars/user1.png" alt="">
                             </div>
@@ -302,7 +303,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="recommended-user">
                             <div class="user-list-img">
                                 <img src="./img//avatars/user1.png" alt="">
                             </div>
@@ -313,7 +314,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="recommended-user">
                             <div class="user-list-img">
                                 <img src="./img//avatars/user1.png" alt="">
                             </div>
@@ -324,7 +325,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="recommended-user">
                             <div class="user-list-img">
                                 <img src="./img//avatars/user1.png" alt="">
                             </div>
@@ -335,7 +336,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="recommended-user">
                             <div class="user-list-img">
                                 <img src="./img//avatars/user1.png" alt="">
                             </div>
@@ -610,5 +611,27 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
     background:none !important;
 }
     </style>
+<script src="./js/dragula.min.js"></script>
+<script>
+dragula([document.getElementById("dragula_left"), document.getElementById("dragula_right")],{
+    moves: function (el, source, handle) {
+        return source === document.getElementById('dragula_right')
+  },
+    accepts: function (el, target) {
+    return target !== document.getElementById('dragula_right')
+  },
+  
+})
+.on('drop', function(el, target, source, sibling){
+     console.log("DROPED");
+     console.log(el, target, source, sibling);
+    $('.empty-slot:last-child').remove();
+ });
+
+$('#dragula_left .recommended-user').on('click', function(){
+    console.log('CLick');
+})
+</script>
+
 </body>
 </html>

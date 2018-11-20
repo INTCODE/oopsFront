@@ -11,6 +11,9 @@
 .light-black {
   color: #333; }
 
+.gray {
+  color: #a6a6a6; }
+
 .primary-color {
   color: #8E77E1; }
 
@@ -20,6 +23,9 @@
 
 .bold {
   font-weight: 600; }
+
+.hide {
+  display: none !important; }
 
 body {
   font-size: 13px;
@@ -222,6 +228,20 @@ header nav ul li.active {
 .cancel-btn {
   color: #a6a6a6;
   padding: 5px 20px; }
+
+.circle-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 50%; }
+
+.circle-btn svg {
+  width: 17px; }
 
 .bold-top-blue {
   padding-top: 20px !important;
@@ -754,10 +774,10 @@ footer .row button {
 
 .apply-btn {
   background-color: #19D363;
-  width: 100%;
   text-align: center;
   justify-content: center;
-  color: #fff; }
+  color: #fff;
+  padding: 5px 40px; }
 
 .apply-btn .img-side-box {
   background-color: #15B360; }
@@ -1084,6 +1104,19 @@ footer .row button {
 .user-box .info-footer .description {
   color: #a6a6a6; }
 
+ul {
+  list-style: none !important; }
+
+.user-list-text {
+  display: none; }
+
+.user-list-img img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 61px;
+  width: 61px; }
+
 .user-list-box {
   padding: 20px; }
 
@@ -1105,13 +1138,24 @@ footer .row button {
   list-style: none;
   padding: 0; }
 
+.user-list-box .user-list .user-list-text {
+  display: block; }
+
+.user-list-box .user-list .user-list-img img {
+  position: relative;
+  height: 61px;
+  width: 61px; }
+
 .user-list-box .user-list.recommended li {
+  position: relative;
   background-color: #fff;
   padding: 12px;
   border-radius: 15px;
   box-shadow: 0px 3px 20px 0px rgba(114, 74, 140, 0.18);
   margin: 7.5px 0;
-  width: 90%; }
+  width: 100%;
+  display: flex;
+  align-items: center; }
 
 .user-list-box .user-list.recommended li .user-list-text {
   font-weight: 300; }
@@ -1126,9 +1170,6 @@ footer .row button {
 
 .user-list-box .user-list li .user-list-img {
   padding-right: 15px; }
-
-.user-list-box .user-list li .user-list-img img {
-  height: 40px; }
 
 .user-list-box .user-list li .user-list-text .name {
   font-weight: 600; }
@@ -1274,7 +1315,11 @@ footer .row button {
 .slider-box .slider .slide .img {
   height: 122px;
   overflow: hidden;
-  width: 100%; }
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5; }
+
+.slider-box .slider .slide .img img {
+  margin: 0 auto; }
 
 .slider-box .slider .slide .text {
   padding: 10px; }
@@ -1333,13 +1378,14 @@ footer .row button {
   justify-content: center;
   align-items: center; }
 
-.add-new-component p {
+.add-new-component-p {
   display: flex;
+  justify-content: center;
   align-items: center;
   font-size: 16px;
   margin: 35px 0; }
 
-.add-new-component p .plus-circle {
+.plus-circle {
   cursor: pointer;
   background-color: transparent;
   border: 1px solid #000;
@@ -1368,6 +1414,7 @@ footer .row button {
   border-radius: 50%;
   width: 60px;
   height: 60px;
+  position: relative;
   cursor: pointer; }
 
 .component .info-header {
@@ -1461,13 +1508,55 @@ footer .row button {
   display: block; }
 
 .info-box .info-body .job-list-item {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   border: 1px solid #e5e5e5;
   box-shadow: 0px 0px 24px #e5e5e5; }
 
-.accepting-box {
+.accepting-box .info-body .job-list {
   text-align: left; }
+
+.your-offer-decision {
+  display: flex;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  right: -20px;
+  top: 50px;
+  border-radius: 50%; }
+
+.your-offer-decision.accepted {
+  background-color: #19D363;
+  background-image: url("../img/icons/check.svg");
+  background-position: center center;
+  background-size: 20px;
+  background-repeat: no-repeat; }
+
+.your-offer-decision.rejected {
+  background-image: url("../img/icons/check.svg");
+  background-position: center center;
+  background-size: 20px;
+  background-repeat: no-repeat; }
+
+.question {
+  display: flex; }
+
+.question label:not(:last-child) {
+  margin-right: 10px; }
+
+.question label:first-child {
+  width: 140%; }
+
+.question label:last-child {
+  width: 60%; }
+
+.add-new-test {
+  display: none; }
+
+.add-new-test.visible {
+  display: block !important; }
 
 @media only screen and (max-width: 991px) {
   .requirements .flex-box {
