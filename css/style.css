@@ -54,6 +54,43 @@ a:hover {
   padding-right: 55px;
   margin-bottom: 0 !important; }
 
+.big-notification {
+  width: 325px;
+  position: absolute;
+  right: 30px;
+  top: 70px;
+  background-color: #fff;
+  border-radius: 24px;
+  display: flex;
+  padding: 20px; }
+
+.big-notification .spike {
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: #fff;
+  position: absolute;
+  display: block;
+  height: 8px;
+  width: 16px;
+  top: -8px;
+  right: 122px; }
+
+.big-notification .noti-img {
+  padding-right: 10px; }
+
+.big-notification .noti-img img {
+  height: 60px;
+  width: 60px; }
+
+.big-notification .noti-message .user {
+  font-size: 18px;
+  color: #000;
+  font-weight: 600; }
+
+.big-notification .noti-message .mess {
+  color: #a6a6a6;
+  font-size: 14px; }
+
 header {
   background-image: -moz-linear-gradient(13deg, #3e3a73 0%, #b33d5a 100%);
   background-image: -webkit-linear-gradient(13deg, #3e3a73 0%, #b33d5a 100%);
@@ -481,8 +518,7 @@ header nav ul li.active {
   margin-top: 30px; }
 
 .job-list h4 {
-  padding-left: 20px;
-  font-size: 14px; }
+  font-size: 18px; }
 
 .job-list h4.recommended {
   color: #47B4F7;
@@ -1400,7 +1436,8 @@ ul {
   margin-right: 10px; }
 
 .add-employers-list {
-  padding: 0; }
+  padding: 0;
+  font-size: 0; }
 
 .add-employers-list li {
   background-image: url("../img/icons/add_empolyer.png");
@@ -1415,7 +1452,17 @@ ul {
   width: 60px;
   height: 60px;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: 300ms; }
+
+.add-employers-list li:hover:not(.empty-slot) {
+  background-color: red;
+  background-size: 15px;
+  border: 1px solid red;
+  background-image: url("../img/icons/cross.svg"); }
+
+.add-employers-list li:hover:not(.empty-slot) img {
+  opacity: .2; }
 
 .component .info-header {
   padding: 0 0 20px; }
@@ -1540,6 +1587,13 @@ ul {
   background-size: 20px;
   background-repeat: no-repeat; }
 
+.your-offer-decision.waiting {
+  background-color: #a6a6a6;
+  background-image: url("../img/icons/dots.svg");
+  background-position: center center;
+  background-size: 20px;
+  background-repeat: no-repeat; }
+
 .question {
   display: flex; }
 
@@ -1557,6 +1611,23 @@ ul {
 
 .add-new-test.visible {
   display: block !important; }
+
+.decision-list {
+  padding: 0; }
+
+.decision-list .user-list li {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 25px;
+  align-items: center;
+  position: relative; }
+
+.decision-list .user-list li .position {
+  color: #47B4F7 !important; }
+
+.decision-list .user-list li .your-offer-decision {
+  top: 30px; }
 
 @media only screen and (max-width: 991px) {
   .requirements .flex-box {

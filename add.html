@@ -15,7 +15,6 @@
     <header>
         <div class="top-bar">
             <span class="left">
-                <a><img src="./img/icons/bars.svg" alt=""></a>
                 <a><img src="./img/icons/home.png" alt=""></a>
             </span>
             <span class="float-right">
@@ -613,6 +612,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
     </style>
 <script src="./js/dragula.min.js"></script>
 <script>
+    var emptySlot = '<li class="empty-slot"></li>';
 dragula([document.getElementById("dragula_left"), document.getElementById("dragula_right")],{
     moves: function (el, source, handle) {
         return source === document.getElementById('dragula_right')
@@ -623,14 +623,25 @@ dragula([document.getElementById("dragula_left"), document.getElementById("dragu
   
 })
 .on('drop', function(el, target, source, sibling){
-     console.log("DROPED");
-     console.log(el, target, source, sibling);
-    $('.empty-slot:last-child').remove();
+    $('.empty-slot').remove();
+    if($("#dragula_left").children().length<10){
+        var missing_empty = 10 - $("#dragula_left").children().length;
+        for(i=0;i<missing_empty;i++){
+            $(emptySlot).appendTo("#dragula_left");
+        }
+    }
+    $('#dragula_left .recommended-user').on('click', function(){
+        $(this).prependTo("#dragula_right");
+        $(this).off();
+        if($("#dragula_left").children().length<10){
+            $(emptySlot).appendTo("#dragula_left");
+        }
+    })
+ })
+ .on('shadow',function(){
+    $('.empty-slot:last-child').css('display','none');
  });
 
-$('#dragula_left .recommended-user').on('click', function(){
-    console.log('CLick');
-})
 </script>
 
 </body>

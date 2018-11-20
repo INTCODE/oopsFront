@@ -62,6 +62,45 @@ a{
         margin-bottom: 0!important;
     }
 }
+.big-notification{
+    width: 325px;
+    position: absolute;
+    right: 30px;
+    top: 70px;
+    background-color: #fff;
+    border-radius: 24px;
+    display: flex;
+    padding: 20px;
+    .spike{
+        -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        background-color: #fff;
+        position: absolute;
+        display: block;
+        height: 8px;
+        width: 16px;
+        top: -8px;
+        right: 122px;
+    }
+    .noti-img{
+        padding-right: 10px;
+        img{
+            height: 60px;
+            width: 60px;
+        }
+    }
+    .noti-message{
+        .user{
+            font-size: 18px;
+            color: #000;
+            font-weight: 600;
+        }
+        .mess{
+            color: $gray;
+            font-size: 14px;
+        }
+    }
+}
 header {
     background-image: -moz-linear-gradient( 13deg, rgb(62,58,115) 0%, rgb(179,61,90) 100%);
     background-image: -webkit-linear-gradient( 13deg, rgb(62,58,115) 0%, rgb(179,61,90) 100%);
@@ -503,8 +542,7 @@ header {
 .job-list{
     margin-top: 30px;
     h4{
-        padding-left: 20px;
-        font-size: 14px;
+        font-size: 18px;
         &.recommended{
             color: $secondary_color;
             font-weight: 600;
@@ -1482,6 +1520,7 @@ ul{
     }
     .add-employers-list{
         padding: 0;
+        font-size: 0;
         li{
             background-image: url('../img/icons/add_empolyer.png');
             background-position: center center;
@@ -1496,9 +1535,19 @@ ul{
             height: 60px;
             position: relative;
             cursor: pointer;
-            
+            transition: 300ms;
+            &:hover:not(.empty-slot){
+                background-color: red;
+                background-size: 15px;
+                border: 1px solid red;
+                background-image: url('../img/icons/cross.svg');
+                img{
+                    opacity: .2;
+                }
+            }
         }
     }
+
     .component{
         .info-header{
             padding: 0 0 20px;
@@ -1629,6 +1678,13 @@ ul{
         background-size: 20px;
         background-repeat: no-repeat;
     }
+    &.waiting{
+        background-color: $gray;
+        background-image: url('../img/icons/dots.svg'); 
+        background-position: center center;
+        background-size: 20px;
+        background-repeat: no-repeat;
+    }
 }
 .question{
     display: flex;
@@ -1652,6 +1708,27 @@ ul{
     }
 }
 // TESTS END
+// HR START
+.decision-list{
+    padding: 0;
+    .user-list{
+        li{
+            background-color: #fff;
+            padding:20px;
+            margin: 10px 0;
+            border-radius: 25px;
+            align-items: center;
+            position: relative;
+            .position{
+                color: $secondary_color!important;
+            }
+            .your-offer-decision{
+                top: 30px;
+            }
+        }
+    }
+}
+// HR END
 @media only screen and (max-width: 991px) {
     .requirements{
         .flex-box{
