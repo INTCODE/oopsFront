@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #ab3a57;
+      }
+
+      .cls-2 {
+        fill: #ab3a57;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_1" data-name="Group 1" transform="translate(-454 -815)">
+    <g id="Elipsa_4_kopia_7" data-name="Elipsa 4 kopia 7" class="cls-1" transform="translate(454 815)">
+      <circle class="cls-3" cx="6.5" cy="6.5" r="6.5"/>
+      <circle class="cls-4" cx="6.5" cy="6.5" r="6"/>
+    </g>
+    <circle id="Elipsa_5_kopia_3" data-name="Elipsa 5 kopia 3" class="cls-2" cx="3.26" cy="3.26" r="3.26" transform="translate(457.24 818.24)"/>
+  </g>
+</svg>

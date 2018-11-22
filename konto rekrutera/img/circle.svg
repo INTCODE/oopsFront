@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #ab3a57;
+      }
+
+      .cls-2 {
+        stroke: none;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Elipsa_4_kopia_7" data-name="Elipsa 4 kopia 7" class="cls-1">
+    <circle class="cls-2" cx="6.5" cy="6.5" r="6.5"/>
+    <circle class="cls-3" cx="6.5" cy="6.5" r="6"/>
+  </g>
+</svg>
