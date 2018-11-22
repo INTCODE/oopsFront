@@ -63,6 +63,7 @@ a{
     }
 }
 .big-notification{
+    z-index: 9;
     width: 325px;
     position: absolute;
     right: 30px;
@@ -71,6 +72,8 @@ a{
     border-radius: 24px;
     display: flex;
     padding: 20px;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
     .spike{
         -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
         clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
@@ -99,6 +102,13 @@ a{
             color: $gray;
             font-size: 14px;
         }
+    }
+    .buttons{
+        display: flex;
+        padding-top: 20px;
+        width: 70%;
+        justify-content: space-between;
+        margin: 0 auto;
     }
 }
 header {
@@ -286,6 +296,7 @@ a.btn:hover{
     border-radius: 50px;
     color: $gray;
     padding: 5px 20px;
+    border: 1px solid #ddd;
 }
 .circle-btn{
     display: flex;
@@ -701,7 +712,7 @@ a.btn:hover{
         background-color: #A996EE;
     }
     .btn{
-        width: 130px;
+        width: 90px;
         margin: 0 auto;
         .img-side-box{
             background-color: #A996EE;
@@ -1261,7 +1272,7 @@ ul{
                 }
             }
         }
-        li{
+        li, a{
             display: flex;
             border-bottom: 1px solid $lightgray;
             padding: 10px 0;
@@ -1720,7 +1731,7 @@ ul{
 .decision-list{
     padding: 0;
     .user-list{
-        li{
+        li, a{
             background-color: #fff;
             padding:20px;
             margin: 10px 0;
@@ -1729,6 +1740,9 @@ ul{
             position: relative;
             .position{
                 color: $secondary_color!important;
+            }
+            .name{
+                color: #000;
             }
             .your-offer-decision{
                 top: 30px;

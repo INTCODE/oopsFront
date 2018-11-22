@@ -55,6 +55,7 @@ a:hover {
   margin-bottom: 0 !important; }
 
 .big-notification {
+  z-index: 9;
   width: 325px;
   position: absolute;
   right: 30px;
@@ -62,7 +63,9 @@ a:hover {
   background-color: #fff;
   border-radius: 24px;
   display: flex;
-  padding: 20px; }
+  padding: 20px;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
 
 .big-notification .spike {
   -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
@@ -90,6 +93,13 @@ a:hover {
 .big-notification .noti-message .mess {
   color: #a6a6a6;
   font-size: 14px; }
+
+.big-notification .buttons {
+  display: flex;
+  padding-top: 20px;
+  width: 70%;
+  justify-content: space-between;
+  margin: 0 auto; }
 
 header {
   background-image: -moz-linear-gradient(13deg, #3e3a73 0%, #b33d5a 100%);
@@ -271,7 +281,8 @@ a.btn:hover {
 .cancel-btn {
   border-radius: 50px;
   color: #a6a6a6;
-  padding: 5px 20px; }
+  padding: 5px 20px;
+  border: 1px solid #ddd; }
 
 .circle-btn {
   display: flex;
@@ -674,7 +685,7 @@ a.btn:hover {
   background-color: #A996EE; }
 
 #about .btn {
-  width: 130px;
+  width: 90px;
   margin: 0 auto; }
 
 #about .btn .img-side-box {
@@ -1207,18 +1218,18 @@ ul {
 .user-list-box .user-list.recommended li .user-list-text .position {
   color: #47B4F7; }
 
-.user-list-box .user-list li {
+.user-list-box .user-list li, .user-list-box .user-list a {
   display: flex;
   border-bottom: 1px solid #e5e5e5;
   padding: 10px 0; }
 
-.user-list-box .user-list li .user-list-img {
+.user-list-box .user-list li .user-list-img, .user-list-box .user-list a .user-list-img {
   padding-right: 15px; }
 
-.user-list-box .user-list li .user-list-text .name {
+.user-list-box .user-list li .user-list-text .name, .user-list-box .user-list a .user-list-text .name {
   font-weight: 600; }
 
-.user-list-box .user-list li .user-list-text .position {
+.user-list-box .user-list li .user-list-text .position, .user-list-box .user-list a .user-list-text .position {
   color: #a6a6a6; }
 
 .user-list-box .lightpurple-btn {
@@ -1623,7 +1634,7 @@ ul {
 .decision-list {
   padding: 0; }
 
-.decision-list .user-list li {
+.decision-list .user-list li, .decision-list .user-list a {
   background-color: #fff;
   padding: 20px;
   margin: 10px 0;
@@ -1631,10 +1642,13 @@ ul {
   align-items: center;
   position: relative; }
 
-.decision-list .user-list li .position {
+.decision-list .user-list li .position, .decision-list .user-list a .position {
   color: #47B4F7 !important; }
 
-.decision-list .user-list li .your-offer-decision {
+.decision-list .user-list li .name, .decision-list .user-list a .name {
+  color: #000; }
+
+.decision-list .user-list li .your-offer-decision, .decision-list .user-list a .your-offer-decision {
   top: 30px; }
 
 li.gu-transit {
