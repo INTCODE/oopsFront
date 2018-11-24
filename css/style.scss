@@ -28,7 +28,9 @@ $lightgray: #e5e5e5;
     padding-left:0;
     padding-right: 0;
 }
-
+.only-mobile{
+    display: none!important;
+}
 .bold{
     font-weight: 600;
 }
@@ -72,7 +74,6 @@ a{
     border-radius: 24px;
     display: flex;
     padding: 20px;
-    flex-wrap: wrap;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
     .spike{
         -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
@@ -108,7 +109,7 @@ a{
         padding-top: 20px;
         width: 70%;
         justify-content: space-between;
-        margin: 0 auto;
+        margin: 5px auto 0 -40px;
     }
 }
 header {
@@ -203,6 +204,7 @@ header {
                 }
             }
             button{
+                cursor: pointer;
                 border: none;
                 background-color: #fff;
                 padding:5px 25px;
@@ -240,6 +242,7 @@ header {
   font-size: 13px;
   height: 40px;
   display: flex;
+  justify-content: center;
   align-items: center;
   border: none;
   box-shadow: 0px 15px 15px 0px rgba(114, 74, 140, 0.1);
@@ -293,6 +296,7 @@ a.btn:hover{
     border-radius: 50px;
 }
 .cancel-btn{
+    background-color: $lightgray;
     border-radius: 50px;
     color: $gray;
     padding: 5px 20px;
@@ -311,6 +315,9 @@ a.btn:hover{
     svg{
         width: 17px;
     }
+}
+.top-border-thin{
+    border-top: 1px solid $lightgray;
 }
 .bold-top-blue{
     padding-top: 20px!important;
@@ -356,7 +363,7 @@ a.btn:hover{
     background-color: #fff;
     width: 100%;
     max-width: 250px;
-    margin: 50px 0;
+    margin: 40px 0;
     border-radius: 10px;
     box-shadow: 0px 3px 20px 0px rgba(114, 74, 140, 0.18);
     padding:25px;
@@ -536,10 +543,11 @@ a.btn:hover{
     .sort-btns-box{
         margin-top: -20px;
         float: right;
-        border-radius: 7px;
+        border-radius: 13px;
         overflow: hidden;
         padding: 0;
         display: flex;
+        background-color: #fff;
         li{
             cursor: pointer;
             display: flex;
@@ -572,7 +580,7 @@ a.btn:hover{
         border-radius: 25px;
         margin: 15px 0;
         position: relative;
-        padding: 13px 3px;
+        padding: 13px 3px 0px;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -584,14 +592,14 @@ a.btn:hover{
             background-size: cover;
             box-shadow: 0px 3px 20px 0px rgba(114, 74, 140, 0.18);
             .job-img{
-                margin-left: 50px
+                margin-left: 35px
             }
         }
         .job-img{
             padding:20px 0;
             text-align: center;
             width: 20%;
-            margin-left: 20px;
+            margin-left: 10px;
             height: 111px;
         }
         .name{
@@ -842,7 +850,6 @@ footer{
         }
     }
     .heading{
-        margin-top: 15px;
         font-size: 15px;
         font-weight: 600;
         color: #333;
@@ -857,9 +864,12 @@ footer{
         }
         .little-info{
             div{
-                padding: 20px 15px;
+                padding: 20px 15px 0;
             }
         }
+    }
+    .apply-btn{
+        margin-bottom: 10px;
     }
 }
 .apply-btn{
@@ -878,6 +888,12 @@ footer{
     .row{
         margin-top: -10px;
     }
+    .info-box{
+        .info-body {
+            // display: flex!important;
+        }
+        
+    }
 }
 .info-box{
     position: relative;
@@ -893,6 +909,7 @@ footer{
         margin-bottom: 10px;
     }
     &.main-info-box{
+        margin-top: 35px;
         padding: 20px 0;
     }
     .info-header{
@@ -1223,8 +1240,12 @@ ul{
         width: 61px;
     }
 }
+.main-component{
+    margin-top: 25px;
+}
 .user-list-box{
-    padding: 20px;
+    padding:0px 20px 20px;
+    margin-top: -15px;
     .heading{
         display: flex;
         align-items: center;
@@ -1239,7 +1260,14 @@ ul{
             }
         }
     }
-    
+    &.recently-joined{
+        margin-top: 10px;
+        padding: 15px;
+        .user-list .user-list-img img{
+            height: 40px;
+            width: 40px;
+        }
+    }
     .user-list{
         list-style:none;
         padding: 0;
@@ -1457,7 +1485,7 @@ ul{
                     .location{
                         padding-right: 45px;
                         &::before{
-                            // content: url('../img/icons/pin.png');
+                            // content: url('../img/icons/pin.svg');
 
                         }
                     }
@@ -1521,7 +1549,7 @@ ul{
         justify-content: center;
         align-items: center;
         font-size: 16px;
-        margin: 35px 0;
+        margin: 25px 0;
     }
     .plus-circle{
         cursor: pointer;
@@ -1576,6 +1604,31 @@ ul{
             .row{
                 width: 100%;
             }
+            &.requirements{
+                label{
+                    width: 95%;
+                    .inputs-box{
+                        display: flex;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        input{
+                            margin-right: 10px;
+                            margin-bottom: 10px;
+                            width: 163px;
+                        }
+                    }
+                }
+                p{
+                    color: $gray;
+                    margin: 5px 0 5px;
+                    display: flex;
+                    align-items: center;
+                    .plus-circle{
+                        border-color: $gray;    
+                        background-image: url('../img/icons/plus-gray.svg');
+                    }
+                }
+            }
         }
         label{
             font-size: 14px;
@@ -1586,8 +1639,8 @@ ul{
                 color: $gray;
                 display: block;
                 border: none;
-                background-color: #F3F5F6;
-                box-shadow: 0 8px 10px #eee;
+                background-color: #fff;
+                box-shadow: 0 3px 10px #eee;
                 width: 100%;
                 border-radius: 25px;
                 padding: 10px 15px;
@@ -1607,8 +1660,8 @@ ul{
             background-repeat: no-repeat;
             -webkit-appearance: none;
             border: none;
-            background-color: #F3F5F6;
-            box-shadow: 0 8px 10px #eee;
+            background-color: #fff;
+            box-shadow: 0 3px 10px #eee;
             margin-top: 5px;
         }
         .info-footer{
@@ -1618,7 +1671,7 @@ ul{
             align-items: center;
             color: $gray;
             padding: 0;
-            .lightpurple-btn{
+            .apply-btn{
                 padding: 5px 60px;
             }
             button{
@@ -1659,7 +1712,6 @@ ul{
 // ADD END
 // TESTS START
 .info-box .info-body{
-    display: block;
     .job-list-item{
         width: 80%;
         margin: 0 auto;
@@ -1801,14 +1853,14 @@ li.gu-transit {
         height: 260px;
         .search-box{
             .logo{
-                top: 20px;
+                top: 5px;
             }
             .search-bar{
                 margin:50px 0 0;
             }
         }
         .line1, .line2{
-            width: 100%;
+            top: 140px;
         }
     }
     .btn{
@@ -1899,8 +1951,16 @@ li.gu-transit {
     }
 }
 @media only screen and (max-width: 768px) {
-    .add-employers-list{
-        text-align: center;
+    .component .info-body.requirements label{
+        .inputs-box{
+            input{
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .only-mobile{
+        display: block!important;
     }
     .page-heading{
         margin-top: 40px;
@@ -1916,7 +1976,7 @@ li.gu-transit {
         }
     }
     .btn:not(.cancel-btn){
-        padding: 10px 20px 10px 50px;
+        padding: 10px 20px;
     }
     header{
         height: 305px;
@@ -1925,11 +1985,10 @@ li.gu-transit {
         }
         .mobile-top-bar{
             padding:15px 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, .25);
             display: block;
             .btn{
                 width: 140px;
-                margin: 5px auto ;}
+                margin: 5px 10px;}
             .first-line{
                 a{
                     padding: 0 5px;
@@ -1942,6 +2001,9 @@ li.gu-transit {
                         }
             }
             .second-line{
+                display: flex;
+                justify-content: center;
+                width: 100%;
                 padding-top:10px;
             }
         }
@@ -1973,6 +2035,9 @@ li.gu-transit {
     .head-panel{
         margin-top: 75px;
         .sort-btns-box{
+            position: absolute;
+            top: 15px;
+            right: 0;
             float: none;
             margin: 15px auto 15px;
         }
@@ -1991,7 +2056,7 @@ li.gu-transit {
     }
     .job-list{
         .job-list-item{
-            padding: 10px;
+            padding: 20px;
             &.recommended{
                 background-image: none;
                 border: 1px solid $secondary_color;
@@ -2034,8 +2099,29 @@ li.gu-transit {
             width: 70%;
         }
     }
+    .offer-main-side{
+        .row{
+            margin-top: -10px;
+        }
+        .info-box{
+            .info-body{
+                text-align: center;
+                display: block!important;
+                .btn{
+                    margin: 10px auto 0;
+                }
+            }
+        }
+    }
 }
 @media only screen and (max-width: 440px) {
+    .user-box{
+        .info-body{
+            .body-box{
+                width: 100%;
+            }
+        }
+    }
     .job-list{
         .job-list-item{
             .job-img{

@@ -5,6 +5,10 @@ $(filters_btn).click(function(){
     $(filters_elem_array).toggleClass('showed');
     $('body').toggleClass('freeze');
 });
+$(".search-box button").click(function(){
+    $(filters_elem_array).toggleClass('showed');
+    $('body').toggleClass('freeze');
+});
 $('#filters_mask').click(function(){
     $(filters_elem_array).toggleClass('showed');
     $('body').toggleClass('freeze');
