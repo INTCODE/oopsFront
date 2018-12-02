@@ -73,7 +73,7 @@ a{
     background-color: #fff;
     border-radius: 24px;
     display: flex;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
     .spike{
         -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
@@ -107,7 +107,7 @@ a{
     .buttons{
         display: flex;
         padding-top: 20px;
-        width: 70%;
+        width: 100%;
         justify-content: space-between;
         margin: 5px auto 0 -40px;
     }
@@ -1228,6 +1228,7 @@ footer{
 ul{
     list-style: none!important;
 }
+
 .user-list-text{
     display: none;
 }
@@ -1297,6 +1298,13 @@ ul{
                     .position{
                         color: $secondary_color;
                     }
+                    .name{
+                        a{
+                            color: #000;
+                            border: none;
+                            padding: 0;
+                        }
+                    }
                 }
             }
         }
@@ -1304,6 +1312,7 @@ ul{
             display: flex;
             border-bottom: 1px solid $lightgray;
             padding: 10px 0;
+            color: #000;
             .user-list-img{
                 padding-right: 15px;
             }
@@ -1351,6 +1360,9 @@ ul{
             justify-content: center;
             align-items: center;
             border-radius: 50%;
+            flex-basis: 40px;
+            flex-grow: 0;
+            flex-shrink: 0;
         }
         .name{
             font-size: 14px;
@@ -1521,6 +1533,9 @@ ul{
 }
 // USER END
 // ADD START
+    #dragula_choose_cancel{
+        display: none
+    }
     .page-heading{
         color: $primary_color;
         font-size: 18px;
@@ -1778,6 +1793,9 @@ ul{
         display: block!important;
     }
 }
+#create_test_btn{
+    cursor: pointer;
+}
 // TESTS END
 // HR START
 .decision-list{
@@ -1810,6 +1828,39 @@ li.gu-transit {
 }
 // HR END
 @media only screen and (max-width: 991px) {
+    #dragula_choose_cancel{
+        display: flex;
+        margin-bottom: 20px;
+    }
+    #dragula_choose_box{
+        position: fixed;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .5);
+        bottom: -2000px;
+        left: 0;
+        right: 0;
+        z-index: 9;
+        padding: 0 5%;
+        height: 100%;
+        overflow: scroll;
+        margin: 0 auto;
+        transition: 300ms;
+        &.showed{
+            bottom: 0;
+        }
+    }
+    .component{
+        .info-footer{
+            padding: 20px;
+            text-align: center;
+            display: block;
+            span:first-child{
+                margin-bottom: 5px;
+                display: flex;
+                justify-content: flex-start;
+            }
+        }
+    }
     .requirements{
         .flex-box{
             display: block;
@@ -1860,7 +1911,7 @@ li.gu-transit {
             }
         }
         .line1, .line2{
-            top: 140px;
+            top: 95px;
         }
     }
     .btn{
@@ -1951,6 +2002,13 @@ li.gu-transit {
     }
 }
 @media only screen and (max-width: 768px) {
+    .exp-list li .name{
+        padding-bottom: 5px;
+    }
+    .exp-list li .date{
+        position: relative;
+        top: 0;
+    }
     .component .info-body.requirements label{
         .inputs-box{
             input{
@@ -1983,6 +2041,9 @@ li.gu-transit {
         .top-bar{
             display: none;
         }
+            .line1, .line2{
+                top: 140px;
+            }
         .mobile-top-bar{
             padding:15px 20px;
             display: block;
@@ -2138,6 +2199,9 @@ li.gu-transit {
             padding: 35px 0;
         }
     }
+    .decision-list .user-list li, .decision-list .user-list a{
+        margin: 10px 20px 10px 0;
+    }
     @media only screen and (max-width: 385px) {
         .job-list .job-list-item .little-info{
             display:block;
@@ -2152,5 +2216,8 @@ li.gu-transit {
                 height: 20px;
                 background-size: 10px;
             }
+        }
+        .component .info-footer .apply-btn{
+            padding: 5px 35px;
         }
     }

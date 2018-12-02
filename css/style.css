@@ -66,7 +66,7 @@ a:hover {
   background-color: #fff;
   border-radius: 24px;
   display: flex;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
 
 .big-notification .spike {
@@ -99,7 +99,7 @@ a:hover {
 .big-notification .buttons {
   display: flex;
   padding-top: 20px;
-  width: 70%;
+  width: 100%;
   justify-content: space-between;
   margin: 5px auto 0 -40px; }
 
@@ -1242,10 +1242,16 @@ ul {
 .user-list-box .user-list.recommended li .user-list-text .position {
   color: #47B4F7; }
 
+.user-list-box .user-list.recommended li .user-list-text .name a {
+  color: #000;
+  border: none;
+  padding: 0; }
+
 .user-list-box .user-list li, .user-list-box .user-list a {
   display: flex;
   border-bottom: 1px solid #e5e5e5;
-  padding: 10px 0; }
+  padding: 10px 0;
+  color: #000; }
 
 .user-list-box .user-list li .user-list-img, .user-list-box .user-list a .user-list-img {
   padding-right: 15px; }
@@ -1290,7 +1296,10 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%; }
+  border-radius: 50%;
+  flex-basis: 40px;
+  flex-grow: 0;
+  flex-shrink: 0; }
 
 .exp-list li .name {
   font-size: 14px;
@@ -1436,6 +1445,9 @@ ul {
 
 .slider-box .slider .slide .text .status p {
   margin: 9px 0; }
+
+#dragula_choose_cancel {
+  display: none; }
 
 .page-heading {
   color: #8E77E1;
@@ -1675,6 +1687,9 @@ ul {
 .add-new-test.visible {
   display: block !important; }
 
+#create_test_btn {
+  cursor: pointer; }
+
 .decision-list {
   padding: 0; }
 
@@ -1702,6 +1717,32 @@ li.gu-transit {
   cursor: pointer; }
 
 @media only screen and (max-width: 991px) {
+  #dragula_choose_cancel {
+    display: flex;
+    margin-bottom: 20px; }
+  #dragula_choose_box {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: -2000px;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    padding: 0 5%;
+    height: 100%;
+    overflow: scroll;
+    margin: 0 auto;
+    transition: 300ms; }
+  #dragula_choose_box.showed {
+    bottom: 0; }
+  .component .info-footer {
+    padding: 20px;
+    text-align: center;
+    display: block; }
+  .component .info-footer span:first-child {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-start; }
   .requirements .flex-box {
     display: block; }
   .requirements .flex-box > div {
@@ -1726,7 +1767,7 @@ li.gu-transit {
   header .search-box .search-bar {
     margin: 50px 0 0; }
   header .line1, header .line2 {
-    top: 140px; }
+    top: 95px; }
   .btn .img-side-box {
     width: 33px; }
   #filters_toggle {
@@ -1793,6 +1834,11 @@ li.gu-transit {
     max-width: 100%; } }
 
 @media only screen and (max-width: 768px) {
+  .exp-list li .name {
+    padding-bottom: 5px; }
+  .exp-list li .date {
+    position: relative;
+    top: 0; }
   .component .info-body.requirements label .inputs-box input {
     width: 100%;
     margin-bottom: 15px; }
@@ -1810,6 +1856,8 @@ li.gu-transit {
     height: 305px; }
   header .top-bar {
     display: none; }
+  header .line1, header .line2 {
+    top: 140px; }
   header .mobile-top-bar {
     padding: 15px 20px;
     display: block; }
@@ -1897,6 +1945,9 @@ li.gu-transit {
   .offer-side-bar {
     padding: 35px 0; } }
 
+.decision-list .user-list li, .decision-list .user-list a {
+  margin: 10px 20px 10px 0; }
+
 @media only screen and (max-width: 385px) {
   .job-list .job-list-item .little-info {
     display: block; }
@@ -1907,4 +1958,6 @@ li.gu-transit {
   .add-new-component p .plus-circle {
     width: 20px;
     height: 20px;
-    background-size: 10px; } }
+    background-size: 10px; }
+  .component .info-footer .apply-btn {
+    padding: 5px 35px; } }
