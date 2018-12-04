@@ -544,7 +544,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
     </style>
 <script src="./js/dragula.min.js"></script>
 <script>
-    var emptySlot = '<li class="empty-slot"></li>';
+    var emptySlot = '<li onclick="openMenuHandler()" class="empty-slot"></li>';
 dragula([document.getElementById("dragula_left"), document.getElementById("dragula_right")],{
     moves: function (el, source, handle) {
         return source === document.getElementById('dragula_right')
