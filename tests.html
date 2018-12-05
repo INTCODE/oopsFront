@@ -107,8 +107,7 @@
 
                 </div>
                 </div>
-                <div class="row slider-box">
-                    <div class="col-12 ">
+                <div class="slider-box">
                             <h4 class="outsite-heading">Buy a Test</h4>
                             <div class="slider event-slider">
                                     <div class="slide info-box">
@@ -167,8 +166,35 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="slide info-box">
+                                        <div class="img"><img src="./img/test.png" alt=""></div>
+                                        <div class="text">
+                                            <p class="title">Senior Ruby on Rails D</p>
+                                            <p class="organizator">IT Recruitment Specialist</p>
+                                            <div class="details">
+                                                <div class="location">32 questions</div>
+                                                <div class="date">30 min</div>
+                                            </div>
+                                            <div class="status">
+                                                <button class="btn apply-btn">700 PLN</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide info-box">
+                                        <div class="img"><img src="./img/test.png" alt=""></div>
+                                        <div class="text">
+                                            <p class="title">Senior Ruby on Rails D</p>
+                                            <p class="organizator">IT Recruitment Specialist</p>
+                                            <div class="details">
+                                                <div class="location">32 questions</div>
+                                                <div class="date">30 min</div>
+                                            </div>
+                                            <div class="status">
+                                                <button class="btn apply-btn">700 PLN</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                    </div>
                 </div>
                 <h4 class="outsite-heading">Create your own test</h4>
                 <div id="create_test_btn" class="info-box add-new-component">
@@ -442,14 +468,24 @@
           arrows: false,
           responsive: [
     {
-      breakpoint: 991,
+      breakpoint: 768,
+      settings: {
+        infinite: false,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: false,
+      }
+    },
+    {
+      breakpoint: 400,
       settings: {
         infinite: false,
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
       }
-    }]
+    }
+]
         });
     </script>
 

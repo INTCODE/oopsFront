@@ -186,7 +186,7 @@
             </div>
             <div class="col-lg-4 order-sm-1 order-lg-2 offer-side-bar">
                 <div class="user-list-box" id="dragula_choose_box">
-                    <div class="heading">Recommended 
+                    <div class="heading">Recommended
                         <span>
                         <div class="panel">
                             <div class="panel-item active">
@@ -544,7 +544,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
     </style>
 <script src="./js/dragula.min.js"></script>
 <script>
-    var emptySlot = '<li onclick="openMenuHandler()" class="empty-slot"></li>';
+    var emptySlot = '<li class="empty-slot"></li>';
 dragula([document.getElementById("dragula_left"), document.getElementById("dragula_right")],{
     moves: function (el, source, handle) {
         return source === document.getElementById('dragula_right')
@@ -552,7 +552,7 @@ dragula([document.getElementById("dragula_left"), document.getElementById("dragu
     accepts: function (el, target) {
     return target !== document.getElementById('dragula_right')
   },
-  
+
 })
 .on('drop', function(el, target, source, sibling){
     $('.empty-slot').remove();

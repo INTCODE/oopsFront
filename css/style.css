@@ -1392,12 +1392,7 @@ ul {
 .slider-box .heading {
   font-size: 17px; }
 
-.slider-box .slider .slick-list {
-  max-width: 786px; }
-
 .slider-box .slider .slide {
-  display: inline-block;
-  max-width: 220px;
   padding: 0; }
 
 .slider-box .slider .slide .img {
@@ -1717,6 +1712,8 @@ li.gu-transit {
   cursor: pointer; }
 
 @media only screen and (max-width: 991px) {
+  .only-mobile {
+    display: block !important; }
   #dragula_choose_cancel {
     display: flex;
     margin-bottom: 20px; }
@@ -1754,8 +1751,6 @@ li.gu-transit {
     text-align: center; }
   .connect .skills-list li .text {
     width: auto; }
-  .slider-box .slider .slick-list {
-    max-width: 300px; }
   body {
     margin-bottom: 50px; }
   main {
@@ -1842,8 +1837,6 @@ li.gu-transit {
   .component .info-body.requirements label .inputs-box input {
     width: 100%;
     margin-bottom: 15px; }
-  .only-mobile {
-    display: block !important; }
   .page-heading {
     margin-top: 40px; }
   .component label {
@@ -1936,6 +1929,9 @@ li.gu-transit {
     margin: 10px auto 0; } }
 
 @media only screen and (max-width: 440px) {
+  .slider-box .slider .slick-list {
+    margin: 0 auto;
+    max-width: 320px; }
   .user-box .info-body .body-box {
     width: 100%; }
   .job-list .job-list-item .job-img {

@@ -892,7 +892,7 @@ footer{
         .info-body {
             // display: flex!important;
         }
-        
+
     }
 }
 .info-box{
@@ -1292,7 +1292,7 @@ ul{
                 width: 100%;
                 display: flex;
                 align-items: center;
-                
+
                 .user-list-text{
                     font-weight: 300;
                     .position{
@@ -1465,12 +1465,10 @@ ul{
         font-size:17px;
     }
     .slider{
-        .slick-list{
-            max-width: 786px;
-        }
+        // .slick-list{
+        //     max-width: 786px;
+        // }
         .slide{
-            display: inline-block;
-            max-width: 220px;
             padding: 0;
             .img{
                 height: 122px;
@@ -1639,7 +1637,7 @@ ul{
                     display: flex;
                     align-items: center;
                     .plus-circle{
-                        border-color: $gray;    
+                        border-color: $gray;
                         background-image: url('../img/icons/plus-gray.svg');
                     }
                 }
@@ -1766,7 +1764,7 @@ ul{
     }
     &.waiting{
         background-color: $gray;
-        background-image: url('../img/icons/dots.svg'); 
+        background-image: url('../img/icons/dots.svg');
         background-position: center center;
         background-size: 20px;
         background-repeat: no-repeat;
@@ -1828,6 +1826,9 @@ li.gu-transit {
 }
 // HR END
 @media only screen and (max-width: 991px) {
+    .only-mobile{
+        display: block!important;
+    }
     #dragula_choose_cancel{
         display: flex;
         margin-bottom: 20px;
@@ -1887,13 +1888,7 @@ li.gu-transit {
             }
         }
     }
-    .slider-box{
-        .slider{
-            .slick-list{
-                max-width: 300px;
-            }
-        }
-    }
+
     body{
         margin-bottom: 50px;
     }
@@ -2017,9 +2012,7 @@ li.gu-transit {
             }
         }
     }
-    .only-mobile{
-        display: block!important;
-    }
+
     .page-heading{
         margin-top: 40px;
     }
@@ -2176,6 +2169,14 @@ li.gu-transit {
     }
 }
 @media only screen and (max-width: 440px) {
+    .slider-box{
+        .slider{
+            .slick-list{
+                margin: 0 auto;
+                max-width: 320px;
+            }
+        }
+    }
     .user-box{
         .info-body{
             .body-box{
