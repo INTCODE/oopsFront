@@ -87,7 +87,8 @@ a:hover {
   height: 60px;
   width: 60px; }
 
-.big-notification .noti-message .user {
+.big-notification .noti-message .user a {
+  margin: 0;
   font-size: 18px;
   color: #000;
   font-weight: 600; }
@@ -95,6 +96,10 @@ a:hover {
 .big-notification .noti-message .mess {
   color: #a6a6a6;
   font-size: 14px; }
+
+.big-notification .noti-message .mess a {
+  color: #a6a6a6;
+  margin: 0; }
 
 .big-notification .buttons {
   display: flex;
@@ -720,9 +725,6 @@ footer .partners h2 {
 footer .partners img {
   width: 100%; }
 
-footer .footer-grid div {
-  padding: 0 20px; }
-
 footer h3 {
   font-size: 16px;
   font-weight: 600; }
@@ -739,6 +741,9 @@ footer ul a {
 
 footer .row {
   padding: 30px 0; }
+
+footer .row div {
+  padding-right: 15px; }
 
 footer .row input {
   padding: 10px 20px;
@@ -818,7 +823,7 @@ footer .row button {
   float: right; }
 
 .offer-side-bar .heading {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   color: #333; }
 
@@ -861,7 +866,7 @@ footer .row button {
   overflow: hidden; }
 
 .info-box .heading {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px; }
 
@@ -1402,6 +1407,7 @@ ul {
   border-bottom: 1px solid #e5e5e5; }
 
 .slider-box .slider .slide .img img {
+  width: 100%;
   margin: 0 auto; }
 
 .slider-box .slider .slide .text {

@@ -29,8 +29,8 @@
                     <img src="./img/avatars/user1.png" alt="">
                 </div>
                 <div class="noti-message">
-                    <div class="user">Marcin</div>
-                    <div class="mess">Send you an offer</div>
+                    <div class="user"><a href="./user.html">Marcin</a></div>
+                    <div class="mess"><a href="./offer.html">Send you an offer</a></div>
                     <div class="buttons">
                         <a class="btn apply-btn" href="#">Accept</a> <a class="btn cancel-btn" href="#">Refuse</a>
                     </div>
@@ -360,7 +360,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row slider-box">
+                <div class=" slider-box">
                     <h2 class="heading">Your events</h2>
                     <div class="slider event-slider">
                         <div class="slide info-box">
@@ -718,14 +718,24 @@
           arrows: false,
           responsive: [
     {
-      breakpoint: 991,
+      breakpoint: 768,
+      settings: {
+        infinite: false,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: false,
+      }
+    },
+    {
+      breakpoint: 400,
       settings: {
         infinite: false,
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
       }
-    }]
+    }
+]
         });
     </script>
 </body>
