@@ -21,6 +21,9 @@
   padding-left: 0;
   padding-right: 0; }
 
+.only-mobile {
+  display: none !important; }
+
 .bold {
   font-weight: 600; }
 
@@ -63,8 +66,7 @@ a:hover {
   background-color: #fff;
   border-radius: 24px;
   display: flex;
-  padding: 20px;
-  flex-wrap: wrap;
+  padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
 
 .big-notification .spike {
@@ -85,7 +87,8 @@ a:hover {
   height: 60px;
   width: 60px; }
 
-.big-notification .noti-message .user {
+.big-notification .noti-message .user a {
+  margin: 0;
   font-size: 18px;
   color: #000;
   font-weight: 600; }
@@ -94,12 +97,16 @@ a:hover {
   color: #a6a6a6;
   font-size: 14px; }
 
+.big-notification .noti-message .mess a {
+  color: #a6a6a6;
+  margin: 0; }
+
 .big-notification .buttons {
   display: flex;
   padding-top: 20px;
-  width: 70%;
+  width: 100%;
   justify-content: space-between;
-  margin: 0 auto; }
+  margin: 5px auto 0 -40px; }
 
 header {
   background-image: -moz-linear-gradient(13deg, #3e3a73 0%, #b33d5a 100%);
@@ -192,6 +199,7 @@ header .search-box .search-bar input::placeholder {
   opacity: 1; }
 
 header .search-box .search-bar button {
+  cursor: pointer;
   border: none;
   background-color: #fff;
   padding: 5px 25px;
@@ -226,6 +234,7 @@ header nav ul li.active {
   font-size: 13px;
   height: 40px;
   display: flex;
+  justify-content: center;
   align-items: center;
   border: none;
   box-shadow: 0px 15px 15px 0px rgba(114, 74, 140, 0.1); }
@@ -279,6 +288,7 @@ a.btn:hover {
   border-radius: 50px; }
 
 .cancel-btn {
+  background-color: #e5e5e5;
   border-radius: 50px;
   color: #a6a6a6;
   padding: 5px 20px;
@@ -297,6 +307,9 @@ a.btn:hover {
 
 .circle-btn svg {
   width: 17px; }
+
+.top-border-thin {
+  border-top: 1px solid #e5e5e5; }
 
 .bold-top-blue {
   padding-top: 20px !important;
@@ -342,7 +355,7 @@ a.btn:hover {
   background-color: #fff;
   width: 100%;
   max-width: 250px;
-  margin: 50px 0;
+  margin: 40px 0;
   border-radius: 10px;
   box-shadow: 0px 3px 20px 0px rgba(114, 74, 140, 0.18);
   padding: 25px;
@@ -512,10 +525,11 @@ a.btn:hover {
 .head-panel .sort-btns-box {
   margin-top: -20px;
   float: right;
-  border-radius: 7px;
+  border-radius: 13px;
   overflow: hidden;
   padding: 0;
-  display: flex; }
+  display: flex;
+  background-color: #fff; }
 
 .head-panel .sort-btns-box li {
   cursor: pointer;
@@ -548,7 +562,7 @@ a.btn:hover {
   border-radius: 25px;
   margin: 15px 0;
   position: relative;
-  padding: 13px 3px;
+  padding: 13px 3px 0px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -562,13 +576,13 @@ a.btn:hover {
   box-shadow: 0px 3px 20px 0px rgba(114, 74, 140, 0.18); }
 
 .job-list .job-list-item.recommended .job-img {
-  margin-left: 50px; }
+  margin-left: 35px; }
 
 .job-list .job-list-item .job-img {
   padding: 20px 0;
   text-align: center;
   width: 20%;
-  margin-left: 20px;
+  margin-left: 10px;
   height: 111px; }
 
 .job-list .job-list-item .name {
@@ -711,9 +725,6 @@ footer .partners h2 {
 footer .partners img {
   width: 100%; }
 
-footer .footer-grid div {
-  padding: 0 20px; }
-
 footer h3 {
   font-size: 16px;
   font-weight: 600; }
@@ -730,6 +741,9 @@ footer ul a {
 
 footer .row {
   padding: 30px 0; }
+
+footer .row div {
+  padding-right: 15px; }
 
 footer .row input {
   padding: 10px 20px;
@@ -809,8 +823,7 @@ footer .row button {
   float: right; }
 
 .offer-side-bar .heading {
-  margin-top: 15px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   color: #333; }
 
@@ -824,7 +837,10 @@ footer .row button {
   font-size: 18px; }
 
 .offer-side-bar .job-list-item .little-info div {
-  padding: 20px 15px; }
+  padding: 20px 15px 0; }
+
+.offer-side-bar .apply-btn {
+  margin-bottom: 10px; }
 
 .apply-btn {
   background-color: #19D363;
@@ -850,11 +866,12 @@ footer .row button {
   overflow: hidden; }
 
 .info-box .heading {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px; }
 
 .info-box.main-info-box {
+  margin-top: 35px;
   padding: 20px 0; }
 
 .info-box .info-header {
@@ -1172,8 +1189,12 @@ ul {
   height: 61px;
   width: 61px; }
 
+.main-component {
+  margin-top: 25px; }
+
 .user-list-box {
-  padding: 20px; }
+  padding: 0px 20px 20px;
+  margin-top: -15px; }
 
 .user-list-box .heading {
   display: flex;
@@ -1188,6 +1209,14 @@ ul {
 .user-list-box .heading span .list-img {
   height: 15px;
   padding-right: 17px; }
+
+.user-list-box.recently-joined {
+  margin-top: 10px;
+  padding: 15px; }
+
+.user-list-box.recently-joined .user-list .user-list-img img {
+  height: 40px;
+  width: 40px; }
 
 .user-list-box .user-list {
   list-style: none;
@@ -1218,10 +1247,16 @@ ul {
 .user-list-box .user-list.recommended li .user-list-text .position {
   color: #47B4F7; }
 
+.user-list-box .user-list.recommended li .user-list-text .name a {
+  color: #000;
+  border: none;
+  padding: 0; }
+
 .user-list-box .user-list li, .user-list-box .user-list a {
   display: flex;
   border-bottom: 1px solid #e5e5e5;
-  padding: 10px 0; }
+  padding: 10px 0;
+  color: #000; }
 
 .user-list-box .user-list li .user-list-img, .user-list-box .user-list a .user-list-img {
   padding-right: 15px; }
@@ -1266,7 +1301,10 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%; }
+  border-radius: 50%;
+  flex-basis: 40px;
+  flex-grow: 0;
+  flex-shrink: 0; }
 
 .exp-list li .name {
   font-size: 14px;
@@ -1359,12 +1397,7 @@ ul {
 .slider-box .heading {
   font-size: 17px; }
 
-.slider-box .slider .slick-list {
-  max-width: 786px; }
-
 .slider-box .slider .slide {
-  display: inline-block;
-  max-width: 220px;
   padding: 0; }
 
 .slider-box .slider .slide .img {
@@ -1374,6 +1407,7 @@ ul {
   border-bottom: 1px solid #e5e5e5; }
 
 .slider-box .slider .slide .img img {
+  width: 100%;
   margin: 0 auto; }
 
 .slider-box .slider .slide .text {
@@ -1413,6 +1447,9 @@ ul {
 .slider-box .slider .slide .text .status p {
   margin: 9px 0; }
 
+#dragula_choose_cancel {
+  display: none; }
+
 .page-heading {
   color: #8E77E1;
   font-size: 18px;
@@ -1438,7 +1475,7 @@ ul {
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  margin: 35px 0; }
+  margin: 25px 0; }
 
 .plus-circle {
   cursor: pointer;
@@ -1492,6 +1529,29 @@ ul {
 .component .info-body .row {
   width: 100%; }
 
+.component .info-body.requirements label {
+  width: 95%; }
+
+.component .info-body.requirements label .inputs-box {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap; }
+
+.component .info-body.requirements label .inputs-box input {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 163px; }
+
+.component .info-body.requirements p {
+  color: #a6a6a6;
+  margin: 5px 0 5px;
+  display: flex;
+  align-items: center; }
+
+.component .info-body.requirements p .plus-circle {
+  border-color: #a6a6a6;
+  background-image: url("../img/icons/plus-gray.svg"); }
+
 .component label {
   font-size: 14px;
   padding-top: 10px;
@@ -1502,8 +1562,8 @@ ul {
   color: #a6a6a6;
   display: block;
   border: none;
-  background-color: #F3F5F6;
-  box-shadow: 0 8px 10px #eee;
+  background-color: #fff;
+  box-shadow: 0 3px 10px #eee;
   width: 100%;
   border-radius: 25px;
   padding: 10px 15px; }
@@ -1522,8 +1582,8 @@ ul {
   background-repeat: no-repeat;
   -webkit-appearance: none;
   border: none;
-  background-color: #F3F5F6;
-  box-shadow: 0 8px 10px #eee;
+  background-color: #fff;
+  box-shadow: 0 3px 10px #eee;
   margin-top: 5px; }
 
 .component .info-footer {
@@ -1534,7 +1594,7 @@ ul {
   color: #a6a6a6;
   padding: 0; }
 
-.component .info-footer .lightpurple-btn {
+.component .info-footer .apply-btn {
   padding: 5px 60px; }
 
 .component .info-footer button {
@@ -1569,9 +1629,6 @@ ul {
 
 .panel .panel-item.active {
   background-color: #8E77E1; }
-
-.info-box .info-body {
-  display: block; }
 
 .info-box .info-body .job-list-item {
   width: 80%;
@@ -1631,6 +1688,9 @@ ul {
 .add-new-test.visible {
   display: block !important; }
 
+#create_test_btn {
+  cursor: pointer; }
+
 .decision-list {
   padding: 0; }
 
@@ -1658,6 +1718,34 @@ li.gu-transit {
   cursor: pointer; }
 
 @media only screen and (max-width: 991px) {
+  .only-mobile {
+    display: block !important; }
+  #dragula_choose_cancel {
+    display: flex;
+    margin-bottom: 20px; }
+  #dragula_choose_box {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: -2000px;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    padding: 0 5%;
+    height: 100%;
+    overflow: scroll;
+    margin: 0 auto;
+    transition: 300ms; }
+  #dragula_choose_box.showed {
+    bottom: 0; }
+  .component .info-footer {
+    padding: 20px;
+    text-align: center;
+    display: block; }
+  .component .info-footer span:first-child {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-start; }
   .requirements .flex-box {
     display: block; }
   .requirements .flex-box > div {
@@ -1669,8 +1757,6 @@ li.gu-transit {
     text-align: center; }
   .connect .skills-list li .text {
     width: auto; }
-  .slider-box .slider .slick-list {
-    max-width: 300px; }
   body {
     margin-bottom: 50px; }
   main {
@@ -1678,11 +1764,11 @@ li.gu-transit {
   header {
     height: 260px; }
   header .search-box .logo {
-    top: 20px; }
+    top: 5px; }
   header .search-box .search-bar {
     margin: 50px 0 0; }
   header .line1, header .line2 {
-    width: 100%; }
+    top: 95px; }
   .btn .img-side-box {
     width: 33px; }
   #filters_toggle {
@@ -1749,8 +1835,14 @@ li.gu-transit {
     max-width: 100%; } }
 
 @media only screen and (max-width: 768px) {
-  .add-employers-list {
-    text-align: center; }
+  .exp-list li .name {
+    padding-bottom: 5px; }
+  .exp-list li .date {
+    position: relative;
+    top: 0; }
+  .component .info-body.requirements label .inputs-box input {
+    width: 100%;
+    margin-bottom: 15px; }
   .page-heading {
     margin-top: 40px; }
   .component label {
@@ -1758,24 +1850,28 @@ li.gu-transit {
   .component .two-input-line input {
     width: 48%; }
   .btn:not(.cancel-btn) {
-    padding: 10px 20px 10px 50px; }
+    padding: 10px 20px; }
   header {
     height: 305px; }
   header .top-bar {
     display: none; }
+  header .line1, header .line2 {
+    top: 140px; }
   header .mobile-top-bar {
     padding: 15px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     display: block; }
   header .mobile-top-bar .btn {
     width: 140px;
-    margin: 5px auto; }
+    margin: 5px 10px; }
   header .mobile-top-bar .first-line a {
     padding: 0 5px;
     color: #fff; }
   header .mobile-top-bar .first-line .user img {
     padding-right: 5px; }
   header .mobile-top-bar .second-line {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     padding-top: 10px; }
   header .search-box {
     width: 90%; }
@@ -1790,6 +1886,9 @@ li.gu-transit {
   .head-panel {
     margin-top: 75px; }
   .head-panel .sort-btns-box {
+    position: absolute;
+    top: 15px;
+    right: 0;
     float: none;
     margin: 15px auto 15px; }
   .specialist-row .specialist-text {
@@ -1800,7 +1899,7 @@ li.gu-transit {
   #about {
     padding: 40px 40px; }
   .job-list .job-list-item {
-    padding: 10px; }
+    padding: 20px; }
   .job-list .job-list-item.recommended {
     background-image: none;
     border: 1px solid #47B4F7; }
@@ -1826,15 +1925,30 @@ li.gu-transit {
   footer {
     text-align: center; }
   footer input {
-    width: 70%; } }
+    width: 70%; }
+  .offer-main-side .row {
+    margin-top: -10px; }
+  .offer-main-side .info-box .info-body {
+    text-align: center;
+    display: block !important; }
+  .offer-main-side .info-box .info-body .btn {
+    margin: 10px auto 0; } }
 
 @media only screen and (max-width: 440px) {
+  .slider-box .slider .slick-list {
+    margin: 0 auto;
+    max-width: 320px; }
+  .user-box .info-body .body-box {
+    width: 100%; }
   .job-list .job-list-item .job-img {
     display: none; }
   .specialist-row input {
     width: 210px; }
   .offer-side-bar {
     padding: 35px 0; } }
+
+.decision-list .user-list li, .decision-list .user-list a {
+  margin: 10px 20px 10px 0; }
 
 @media only screen and (max-width: 385px) {
   .job-list .job-list-item .little-info {
@@ -1846,4 +1960,6 @@ li.gu-transit {
   .add-new-component p .plus-circle {
     width: 20px;
     height: 20px;
-    background-size: 10px; } }
+    background-size: 10px; }
+  .component .info-footer .apply-btn {
+    padding: 5px 35px; } }
