@@ -63,54 +63,9 @@ if($(document).width()<991){
     $('#dragula_right .recommended-user').click(addUserHandler);
 
 }
-// if($(document).width()<991){
-//     $('#dragula_left .empty-slot').on('click',function(){
-//         $("#dragula_choose_box").toggleClass('showed');
-//         $('body').toggleClass('freeze');
-//     });
-//     $('#dragula_choose_cancel').on('click',function(){
-//         $("#dragula_choose_box").toggleClass('showed');
-//         $('body').toggleClass('freeze');
-//     });
-//     $('#dragula_right .recommended-user').on('click', function(){
-//         $(this).prependTo("#dragula_left");
-//         $(this).off();
-//         $('.empty-slot').remove();
-//         if($("#dragula_left").children().length<10){
-//             var missing_empty = 10 - $("#dragula_left").children().length;
-//             for(i=0;i<missing_empty;i++){
-//                 $(emptySlot).appendTo("#dragula_left");
-//                 $('#dragula_left .empty-slot').on('click',function(){
-//                     $("#dragula_choose_box").toggleClass('showed');
-//                     $('body').toggleClass('freeze');
-//                 });
-//             }
-//         }
-//         $('#dragula_left .recommended-user').on('click', function(){
-//             $(this).prependTo("#dragula_right");
-//             $(this).off();
-//             if($("#dragula_left").children().length<10){
-//                 $(emptySlot).appendTo("#dragula_left");
-//                 $('#dragula_left .empty-slot').on('click',function(){
-//                     $("#dragula_choose_box").toggleClass('showed');
-//                     $('body').toggleClass('freeze');
-//                 });
-//             }
-//             $('#dragula_right .recommended-user').on('click', function(){
-//                 $(this).prependTo("#dragula_left");
-//                 $(this).off();
-//                 $('.empty-slot').remove();
-//                 if($("#dragula_left").children().length<10){
-//                     var missing_empty = 10 - $("#dragula_left").children().length;
-//                     for(i=0;i<missing_empty;i++){
-//                         $(emptySlot).appendTo("#dragula_left");
-//                         $('#dragula_left .empty-slot').on('click',function(){
-//                             $("#dragula_choose_box").toggleClass('showed');
-//                             $('body').toggleClass('freeze');
-//                         });
-//                     }
-//                 }
-//             });
-//         })
-//     })
-// }
+
+// SHOW MORE TEXT
+$('#more_text_trigger').click(function(){
+    $( this ).parent().siblings(".more").slideToggle("fast");
+    $( this ).toggleClass('active');
+})
