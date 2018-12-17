@@ -151,18 +151,18 @@
                             <div class="text">
                                 <p class="name">Project Manager</p>
                                 <p class="position">Lorem ipsum dolor sit</p>
-                                <a href="./user.html" class="apply-btn btn">Join</a>
+                                <button href="" data-toggle='#join_team_modal' class="apply-btn btn modal-toggler">Join</button>
                             </div>
                         </li>
                     </ul>
                     <div class="top-border-lightgray">
-                        <button class="btn outline-btn">Propose a new specialist</button>
+                        <button class="btn outline-btn modal-toggler" data-toggle='#new_specialist_modal'>Propose a new specialist</button>
                     </div>
 
                 </div>
                 <div class="job-list">
                     <h4>Newest jobs</h4>
-                    <a href="./offer.html" class="job-list-item ">
+                    <a href="./offer.html" class="job-list-item">
                         <div class="job-img">
                             <img src="./img/logos/logo_1.png" alt="">
                         </div>
@@ -384,11 +384,12 @@
             <a href="#"><img src="./img/icons/twitter.svg" alt="twitter"></a>
         </span>
     </div>
-    <div id="new-specialist-modal" class="modal visible">
+    <div id="new_specialist_modal" class="modal ">
         <div class="row">
             <div class="col-lg-8">
                 <div class="info-box bigger-padding bold-top-purple">
                     <div class="info-header">
+                        <div class="circle-btn close-btn modal-dismiss"></div>
                         <h4 class="heading">Suggest a new specialist</h4>
                         <h6>For the <a href="#">MobileApps</a> Team</h6>
                     </div>
@@ -403,16 +404,26 @@
                         </label>
                         <label>
                             Reason <span class="primary-color">*</span>
-                            <textarea cols="30" rows="10"></textarea>
+                            <textarea cols="30" rows="6"></textarea>
                         </label>
+                        <div class="recommend">
+                            <label>Recommend an employee</label>
+                            <ul class="add-employers-list" id="dragula_left" data-slots=5>
+                                <li class="empty-slot"></li>
+                                <li class="empty-slot"></li>
+                                <li class="empty-slot"></li>
+                                <li class="empty-slot"></li>
+                                <li class="empty-slot"></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="info-footer">
                         <span>
                             <span class="primary-color">*</span> - required fields
                         </span>
                         <span>
-                            <button class="btn cancel-btn">Cancel</button>
-                            <button class="btn apply-btn">Save</button>
+                            <button class="btn cancel-btn modal-dismiss">Cancel</button>
+                            <button class="btn apply-btn">Send offer</button>
                         </span>
                     </div>
                 </div>
@@ -504,10 +515,78 @@
                 </div>
             </div>
         </div>
+        <div id="join_team_modal" class="modal ">
+            <div class="info-box bigger-padding bold-top-purple">
+                <div class="info-header">
+                    <div class="circle-btn close-btn modal-dismiss"></div>
+                    <h4 class="heading">Join to the Team</h4>
+                    <h6>For the <a href="#">Project Manager</a>'s position</h6>
+                </div>
+                <div class="info-body">
+                    <div class="flex-box">
+                        <div class="item">
+                            <div class="img"><img src="./img/avatars/user1.png" alt=""></div>
+                            <div class="text">
+                                <p>Mateusz</p>
+                                <p>Project Menager</p>
+                            </div>
+                        </div>
+                        <div class="item"></div>
+                    </div>
+                    <label>
+                        Estimated costs of your work <span class="primary-color">*</span>
+                        <input type="text">
+                    </label>
+                </div>
+                <div class="info-footer">
+                    <span>
+                        <span class="primary-color">*</span> - required fields
+                    </span>
+                    <span>
+                        <button class="btn cancel-btn modal-dismiss">Cancel</button>
+                        <button class="btn apply-btn">Send offer</button>
+                    </span>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/rangeslider.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script src="./js/dragula.min.js"></script>
+<script>
+    var emptySlot = '<li class="empty-slot"></li>';
+dragula([document.getElementById("dragula_left"), document.getElementById("dragula_right")],{
+    moves: function (el, source, handle) {
+        return source === document.getElementById('dragula_right');
+  },
+    accepts: function (el, target) {
+    return target !== document.getElementById('dragula_right');
+  },
+
+})
+.on('drop', function(el, target, source, sibling){
+    $('.empty-slot').remove();
+    var slots_num = $('#dragula_left').data('slots');
+    if($("#dragula_left").children().length<slots_num){
+        var missing_empty = slots_num - $("#dragula_left").children().length;
+        for(i=0;i<missing_empty;i++){
+            $(emptySlot).appendTo("#dragula_left");
+        }
+    }
+    $('#dragula_left .recommended-user').on('click', function(){
+        $(this).prependTo("#dragula_right");
+        $(this).off();
+        if($("#dragula_left").children().length<slots_num){
+            $(emptySlot).appendTo("#dragula_left");
+        }
+    })
+ })
+ .on('shadow',function(){
+    $('.empty-slot:last-child').css('display','none');
+ });
+
+</script>
 </body>
 </html>

@@ -308,6 +308,15 @@ a.btn:hover {
 .circle-btn svg {
   width: 17px; }
 
+.close-btn {
+  background-repeat: no-repeat;
+  background-image: url("../img/icons/cross_black.svg");
+  background-position: center center;
+  background-size: 12px 12px;
+  position: absolute;
+  right: 15px;
+  cursor: pointer; }
+
 .outline-btn {
   border: 1px solid #000;
   border-radius: 50px;
@@ -1582,7 +1591,7 @@ ul {
   display: block;
   border: none;
   background-color: #fff;
-  box-shadow: 0 3px 10px #eee;
+  box-shadow: 0 5px 15px rgba(114, 74, 140, 0.18);
   width: 100%;
   border-radius: 25px;
   padding: 10px 15px; }
@@ -1790,19 +1799,61 @@ li.gu-transit {
 .team-list li .text .name {
   color: #000; }
 
-body {
-  overflow: hidden; }
+.team-list li .text button {
+  margin: 0 auto; }
 
 .modal {
   background-color: rgba(0, 0, 0, 0.5);
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  text-align: center; }
 
 .modal .row {
-  margin: 50px auto 0;
+  margin: 10px auto 0;
   width: 80%; }
 
 .modal .user-list-box {
   margin-top: 0; }
+
+.modal .info-header a {
+  text-decoration: underline; }
+
+.modal .info-body {
+  flex-direction: column; }
+
+.modal .info-body input, .modal .info-body textarea {
+  margin: 0 auto;
+  margin-top: 5px;
+  color: #a6a6a6;
+  display: block;
+  border: none;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(114, 74, 140, 0.18);
+  border-radius: 25px;
+  padding: 10px 15px; }
+
+.modal .info-body input {
+  width: 60%; }
+
+.modal .info-body label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px; }
+
+.modal .info-footer {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.modal .info-footer button {
+  display: inline-block; }
+
+#join_team_modal {
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px 300px; }
 
 @media only screen and (max-width: 991px) {
   .only-mobile {

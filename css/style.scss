@@ -323,6 +323,15 @@ a.btn:hover{
         width: 17px;
     }
 }
+.close-btn{
+    background-repeat: no-repeat;
+    background-image: url('../img/icons/cross_black.svg');
+    background-position: center center;
+    background-size: 12px 12px;
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+}
 .outline-btn{
     border: 1px solid #000;
     border-radius: 50px;
@@ -1678,7 +1687,7 @@ ul{
                 display: block;
                 border: none;
                 background-color: #fff;
-                box-shadow: 0 3px 10px #eee;
+                box-shadow: 0 5px 15px rgba(114, 74, 140, .18);
                 width: 100%;
                 border-radius: 25px;
                 padding: 10px 15px;
@@ -1904,24 +1913,70 @@ li.gu-transit {
             .name{
                 color: #000;
             }
+            button{
+                margin: 0 auto;
+            }
         }
     }
 }
-body{
-    overflow: hidden;
-}
+// body{
+//     overflow: hidden;
+// }
 .modal{
     background-color: rgba(0, 0, 0, .5);
     overflow-y: scroll;
-
+    text-align: center;
     .row{
-        margin: 50px auto 0;
+        margin: 10px auto 0;
         width: 80%;
         
     }
     .user-list-box{
         margin-top: 0;
     }
+    .info-header{
+        a{
+            text-decoration: underline;
+        }
+    }
+    .info-body{
+        flex-direction: column;
+        input, textarea{
+            margin: 0 auto;
+            margin-top: 5px;
+            color: #a6a6a6;
+            display: block;
+            border: none;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 5px 15px rgba(114, 74, 140, .18);
+            border-radius: 25px;
+            padding: 10px 15px;
+        }
+        input{
+            width: 60%;
+        }
+        label{
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+    }
+    .info-footer{
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button{
+            display: inline-block;
+        }
+    }
+}
+#join_team_modal{
+    width: 100%;
+    margin: 0 auto; 
+    background-color: rgba(0, 0, 0, .5);
+    padding:50px 300px;
 }
 // PROJECT END
 @media only screen and (max-width: 991px) {

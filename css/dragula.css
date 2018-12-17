@@ -18,7 +18,8 @@
 .gu-transit {
   opacity: 0.2;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
-  filter: alpha(opacity=20); }
+  filter: alpha(opacity=20);
+  z-index: 9; }
 
 li.ui-draggable-dragging {
   list-style: none; }

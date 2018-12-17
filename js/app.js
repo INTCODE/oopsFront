@@ -69,3 +69,15 @@ $('#more_text_trigger').click(function(){
     $( this ).parent().siblings(".more").slideToggle("fast");
     $( this ).toggleClass('active');
 })
+
+// OPEN MODAL
+$('.modal-toggler').click(function(){
+    var modal = $(this).data('toggle');
+    $(modal).toggleClass('visible');
+})
+
+// CLOSE MODAL
+$('.modal-dismiss').click(function(){
+    var modal = $(this).closest('.modal');
+    $(modal).toggleClass('visible');
+})
