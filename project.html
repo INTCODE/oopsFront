@@ -406,7 +406,7 @@
                             Reason <span class="primary-color">*</span>
                             <textarea cols="30" rows="6"></textarea>
                         </label>
-                        <div class="recommend">
+                        <div class="recommend top-border-lightgray">
                             <label>Recommend an employee</label>
                             <ul class="add-employers-list" id="dragula_left" data-slots=5>
                                 <li class="empty-slot"></li>
@@ -515,7 +515,7 @@
                 </div>
             </div>
         </div>
-        <div id="join_team_modal" class="modal ">
+        <div id="join_team_modal" class="modal">
             <div class="info-box bigger-padding bold-top-purple">
                 <div class="info-header">
                     <div class="circle-btn close-btn modal-dismiss"></div>
@@ -523,17 +523,28 @@
                     <h6>For the <a href="#">Project Manager</a>'s position</h6>
                 </div>
                 <div class="info-body">
-                    <div class="flex-box">
-                        <div class="item">
-                            <div class="img"><img src="./img/avatars/user1.png" alt=""></div>
-                            <div class="text">
-                                <p>Mateusz</p>
-                                <p>Project Menager</p>
+                    <div class="flex-box" id="position_box">
+                        <div class="item handle">
+                            <div class="your-offer-decision ">
+                            </div>
+                            <div class="img handle" ><img src="./img/avatars/user1.png" alt=""></div>
+                            <div class="text handle">
+                                <p class="name">Mateusz</p>
+                                <p class="position">Project Menager</p>
                             </div>
                         </div>
-                        <div class="item"></div>
+                        <div class="item" id="empty_box">
+                            <div class="img"><img src="./img/avatars/question_mark.png" alt=""></div>
+                            <div class="text">
+                                <p class="name">Project Manager</p>
+                                <p class="position">Lorem ipsum dolor sit</p>
+                            </div>
+                        </div>
                     </div>
-                    <label>
+                    <p class="bottom-text">
+                        Drag your profile’s slot and drop to the empty.
+                    </p>
+                    <label class="top-border-lightgray">
                         Estimated costs of your work <span class="primary-color">*</span>
                         <input type="text">
                     </label>
@@ -587,6 +598,17 @@ dragula([document.getElementById("dragula_left"), document.getElementById("dragu
     $('.empty-slot:last-child').css('display','none');
  });
 
+</script>
+<script>
+    dragula([document.getElementById("position_box")], {
+  moves: function (el, container, handle) {
+    return handle.classList.contains('handle');
+  }
+})
+    .on('drop',function(){
+    $('#empty_box').css('display','none');
+    $('#join_team_modal .your-offer-decision').toggleClass('accepted')
+ });
 </script>
 </body>
 </html>

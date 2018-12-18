@@ -1924,8 +1924,9 @@ li.gu-transit {
 // }
 .modal{
     background-color: rgba(0, 0, 0, .5);
-    overflow-y: scroll;
+    overflow-y: auto;
     text-align: center;
+    
     .row{
         margin: 10px auto 0;
         width: 80%;
@@ -1940,6 +1941,7 @@ li.gu-transit {
         }
     }
     .info-body{
+        padding: 20px 0;
         flex-direction: column;
         input, textarea{
             margin: 0 auto;
@@ -1977,7 +1979,46 @@ li.gu-transit {
     margin: 0 auto; 
     background-color: rgba(0, 0, 0, .5);
     padding:50px 300px;
+    .flex-box{
+        padding: 0 50px;
+        margin-bottom: 30px;
+        .item{
+            position: relative;
+            padding: 20px;
+            width: 252px;
+            box-shadow: 0 5px 35px rgba(114, 74, 140, .18);
+            border-radius: 20px;
+            margin: 0 auto;
+            .your-offer-decision{
+                top: 70px;
+            }
+            .img{
+                padding-bottom: 15px;
+            }
+            .text{
+                padding-top: 10px;
+                border-top: 1px solid $lightgray;
+                p{
+                    margin-bottom: 0;
+                }
+                .name{
+                    margin-bottom: 5px;
+                    font-weight: 600;
+                }
+                .position{
+                    color: $gray;
+                }
+            }
+        }
+    }
+    input{
+        text-align: center;
+    }
+    .bottom-text{
+        color: $gray;
+    }
 }
+
 // PROJECT END
 @media only screen and (max-width: 991px) {
     .only-mobile{
