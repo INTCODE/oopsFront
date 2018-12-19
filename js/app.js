@@ -81,3 +81,5 @@ $('.modal-dismiss').click(function(){
     var modal = $(this).closest('.modal');
     $(modal).toggleClass('visible');
 })
+
+//RESET MODAL
