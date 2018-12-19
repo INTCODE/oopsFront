@@ -1573,6 +1573,7 @@ ul{
         font-size: 18px;
         padding:30px 0 0 15px;
         display: inline-block;
+        font-weight: 600;
     }
     .add-component-user-email{
         color: #fff;
@@ -1676,12 +1677,26 @@ ul{
                     }
                 }
             }
+
         }
         label{
             font-size: 14px;
             padding-top: 10px;
             width: 90%;
             input{
+                margin-top: 5px;
+                color: $gray;
+                display: block;
+                border: none;
+                background-color: #fff;
+                box-shadow: 0 5px 15px rgba(114, 74, 140, .18);
+                width: 100%;
+                border-radius: 25px;
+                padding: 10px 15px;
+            }
+            textarea{
+                display: block;
+                width: 100%;
                 margin-top: 5px;
                 color: $gray;
                 display: block;
@@ -1886,9 +1901,16 @@ li.gu-transit {
 .expanded{
     max-height: 100%!important;
 }
+.team{
+    label{
+        width:100%;
+    }
+}
 .team-list{
     margin-top: 15px;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
     li{
         margin-right: 10px;
         display: inline-block;
@@ -1902,19 +1924,31 @@ li.gu-transit {
             margin-right: 0;
         }
         .img{
+            background-color: $lightgray;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 10px auto 15px;
             border-bottom: 1px solid $lightgray;
-            padding: 20px 0;
+        }
+        .circle-btn{
+            margin: 35px auto 25px;
         }
         .text{
-            padding: 10px 20px;
+            border-top: 1px solid $lightgray;
+            padding: 10px 5px;
             p{
-                margin-bottom: 15px;
+                margin-bottom: 0;
             }
             .name{
+                font-weight: 600;
                 color: #000;
             }
-            button{
-                margin: 0 auto;
+            .position{
+                color: #a6a6a6;
+            }
+            button, a{
+                margin: 10px auto 0;
             }
         }
     }
@@ -1926,11 +1960,11 @@ li.gu-transit {
     background-color: rgba(0, 0, 0, .5);
     overflow-y: auto;
     text-align: center;
-    
+
     .row{
         margin: 10px auto 0;
         width: 80%;
-        
+        max-width: 1100px;
     }
     .user-list-box{
         margin-top: 0;
@@ -1976,9 +2010,13 @@ li.gu-transit {
 }
 #join_team_modal{
     width: 100%;
-    margin: 0 auto; 
+    margin: 0 auto;
     background-color: rgba(0, 0, 0, .5);
     padding:50px 300px;
+    .info-box{
+        max-width: 800px;
+        margin: 0 auto;
+    }
     .flex-box{
         padding: 0 50px;
         margin-bottom: 30px;

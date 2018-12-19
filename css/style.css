@@ -1482,7 +1482,8 @@ ul {
   color: #8E77E1;
   font-size: 18px;
   padding: 30px 0 0 15px;
-  display: inline-block; }
+  display: inline-block;
+  font-weight: 600; }
 
 .add-component-user-email {
   color: #fff;
@@ -1586,6 +1587,19 @@ ul {
   width: 90%; }
 
 .component label input {
+  margin-top: 5px;
+  color: #a6a6a6;
+  display: block;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(114, 74, 140, 0.18);
+  width: 100%;
+  border-radius: 25px;
+  padding: 10px 15px; }
+
+.component label textarea {
+  display: block;
+  width: 100%;
   margin-top: 5px;
   color: #a6a6a6;
   display: block;
@@ -1769,9 +1783,14 @@ li.gu-transit {
 .expanded {
   max-height: 100% !important; }
 
+.team label {
+  width: 100%; }
+
 .team-list {
   margin-top: 15px;
-  padding: 0; }
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; }
 
 .team-list li {
   margin-right: 10px;
@@ -1787,20 +1806,32 @@ li.gu-transit {
   margin-right: 0; }
 
 .team-list li .img {
-  border-bottom: 1px solid #e5e5e5;
-  padding: 20px 0; }
+  background-color: #e5e5e5;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px auto 15px;
+  border-bottom: 1px solid #e5e5e5; }
+
+.team-list li .circle-btn {
+  margin: 35px auto 25px; }
 
 .team-list li .text {
-  padding: 10px 20px; }
+  border-top: 1px solid #e5e5e5;
+  padding: 10px 5px; }
 
 .team-list li .text p {
-  margin-bottom: 15px; }
+  margin-bottom: 0; }
 
 .team-list li .text .name {
+  font-weight: 600;
   color: #000; }
 
-.team-list li .text button {
-  margin: 0 auto; }
+.team-list li .text .position {
+  color: #a6a6a6; }
+
+.team-list li .text button, .team-list li .text a {
+  margin: 10px auto 0; }
 
 .modal {
   background-color: rgba(0, 0, 0, 0.5);
@@ -1809,7 +1840,8 @@ li.gu-transit {
 
 .modal .row {
   margin: 10px auto 0;
-  width: 80%; }
+  width: 80%;
+  max-width: 1100px; }
 
 .modal .user-list-box {
   margin-top: 0; }
@@ -1855,6 +1887,10 @@ li.gu-transit {
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 50px 300px; }
+
+#join_team_modal .info-box {
+  max-width: 800px;
+  margin: 0 auto; }
 
 #join_team_modal .flex-box {
   padding: 0 50px;
