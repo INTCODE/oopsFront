@@ -74,12 +74,39 @@ $('#more_text_trigger').click(function(){
 $('.modal-toggler').click(function(){
     var modal = $(this).data('toggle');
     $(modal).toggleClass('visible');
+    $('body').addClass('freeze');
 })
 
 // CLOSE MODAL
 $('.modal-dismiss').click(function(){
     var modal = $(this).closest('.modal');
     $(modal).toggleClass('visible');
+    $('body').removeClass('freeze');
 })
 
 //RESET MODAL
+$('.modal-reseter').click(function(){
+    var modal = $(this).closest('.modal');
+    var modalInputs = $(modal).find( "input" );
+    var modalTextareas = $(modal).find( "textarea" );
+
+    $(modalInputs).val('');
+    $(modalTextareas).val('');
+
+    $('#dragula_left .recommended-user').prependTo("#dragula_right");
+    $('#dragula_left .recommended-user').off();
+    var slots_num = $(".modal #dragula_left").data('slots');
+    var missing_empty = slots_num - $("#dragula_left").children().length;
+        for(i=0;i<missing_empty;i++){
+            $(emptySlot).appendTo("#dragula_left");
+        }
+})
+// JOIN TEAM RESET MODAL
+$('.jointeam-modal-reseter').click(function(){
+    var modal = $(this).closest('.modal');
+    var modalInputs = $(modal).find( "input" );
+    
+    $(modalInputs).val('');
+    $('#join_team_modal .your-offer-decision').removeClass('accepted')
+    $('#empty_box').css('display','block');
+})

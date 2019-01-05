@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/rangeslider.css">
+    <link rel="stylesheet" href="./css/dragula.css">
 </head>
 <body>
     <header>
@@ -422,7 +423,7 @@
                             <span class="primary-color">*</span> - required fields
                         </span>
                         <span>
-                            <button class="btn cancel-btn modal-dismiss">Cancel</button>
+                            <button class="btn cancel-btn modal-dismiss modal-reseter">Cancel</button>
                             <button class="btn apply-btn">Send offer</button>
                         </span>
                     </div>
@@ -554,7 +555,7 @@
                         <span class="primary-color">*</span> - required fields
                     </span>
                     <span>
-                        <button class="btn cancel-btn modal-dismiss">Cancel</button>
+                        <button class="btn cancel-btn modal-dismiss jointeam-modal-reseter">Cancel</button>
                         <button class="btn apply-btn">Send offer</button>
                     </span>
                 </div>
@@ -605,10 +606,15 @@ dragula([document.getElementById("dragula_left"), document.getElementById("dragu
     return handle.classList.contains('handle');
   }
 })
-    .on('drop',function(){
+ .on('shadow',function(){
     $('#empty_box').css('display','none');
-    $('#join_team_modal .your-offer-decision').toggleClass('accepted')
+    $('#join_team_modal .your-offer-decision').addClass('accepted')
+ })
+ .on('drop',function(){
+    $('#join_team_modal .your-offer-decision').addClass('accepted')
+    $('#empty_box').css('display','none');
  });
+
 </script>
 </body>
 </html>

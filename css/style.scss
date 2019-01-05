@@ -1978,6 +1978,7 @@ li.gu-transit {
         padding: 20px 0;
         flex-direction: column;
         input, textarea{
+            text-align: center;
             margin: 0 auto;
             margin-top: 5px;
             color: #a6a6a6;
@@ -2046,6 +2047,13 @@ li.gu-transit {
                 .position{
                     color: $gray;
                 }
+            }
+            &.handle{
+                cursor: pointer;
+                order: 1;
+            }
+            &#empty_box{
+                order: 2;
             }
         }
     }

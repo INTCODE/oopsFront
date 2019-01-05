@@ -556,8 +556,9 @@ dragula([document.getElementById("dragula_left"), document.getElementById("dragu
 })
 .on('drop', function(el, target, source, sibling){
     $('.empty-slot').remove();
+    var slots_num = $('#dragula_left').data('slots');
     if($("#dragula_left").children().length<10){
-        var missing_empty = 10 - $("#dragula_left").children().length;
+        var missing_empty = slots_num - $("#dragula_left").children().length;
         for(i=0;i<missing_empty;i++){
             $(emptySlot).appendTo("#dragula_left");
         }

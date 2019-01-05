@@ -1854,6 +1854,7 @@ li.gu-transit {
   flex-direction: column; }
 
 .modal .info-body input, .modal .info-body textarea {
+  text-align: center;
   margin: 0 auto;
   margin-top: 5px;
   color: #a6a6a6;
@@ -1923,6 +1924,13 @@ li.gu-transit {
 
 #join_team_modal .flex-box .item .text .position {
   color: #a6a6a6; }
+
+#join_team_modal .flex-box .item.handle {
+  cursor: pointer;
+  order: 1; }
+
+#join_team_modal .flex-box .item#empty_box {
+  order: 2; }
 
 #join_team_modal input {
   text-align: center; }
