@@ -32,8 +32,9 @@ function addUserHandler(){
     $(this).prependTo("#dragula_left");
     $(this).click(removeUserHandler);
     $('.empty-slot').remove();
-    if($("#dragula_left").children().length<10){
-        var missing_empty = 10 - $("#dragula_left").children().length;
+    var slots_num = $("#dragula_left").data('slots');
+    if($("#dragula_left").children().length<slots_num){
+        var missing_empty = slots_num - $("#dragula_left").children().length;
         for(i=0;i<missing_empty;i++){
             $(emptySlot).appendTo("#dragula_left");
             $('.empty-slot').off();
@@ -45,8 +46,9 @@ function removeUserHandler(){
     $(this).prependTo("#dragula_right");
     $(this).off();
     $('#dragula_right .recommended-user').click(addUserHandler);
-    if($("#dragula_left").children().length<10){
-        var missing_empty = 10 - $("#dragula_left").children().length;
+    var slots_num = $("#dragula_left").data('slots');
+    if($("#dragula_left").children().length<slots_num){
+        var missing_empty = slots_num - $("#dragula_left").children().length;
         for(i=0;i<missing_empty;i++){
             $(emptySlot).appendTo("#dragula_left");
             $('.empty-slot').off();

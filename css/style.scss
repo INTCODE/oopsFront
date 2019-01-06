@@ -2053,6 +2053,7 @@ li.gu-transit {
                 order: 1;
             }
             &#empty_box{
+                margin-left: 50px;
                 order: 2;
             }
         }
@@ -2066,12 +2067,18 @@ li.gu-transit {
 }
 
 // PROJECT END
+@media only screen and (max-width: 1367px) {
+    #join_team_modal{
+        padding: 50px;
+    }
+}
 @media only screen and (max-width: 991px) {
     .only-mobile{
         display: block!important;
     }
     #dragula_choose_cancel{
         display: flex;
+        margin-top: 10px;
         margin-bottom: 20px;
     }
     #dragula_choose_box{
@@ -2238,6 +2245,9 @@ li.gu-transit {
     }
 }
 @media only screen and (max-width: 768px) {
+    #join_team_modal{
+        padding: 10px;
+    }
     .exp-list li .name{
         padding-bottom: 5px;
     }
@@ -2408,8 +2418,39 @@ li.gu-transit {
             }
         }
     }
+    .team-list{
+        li{
+            margin: 10px auto!important;
+        }
+        
+    }
+}
+@media only screen and (max-width: 540px) {
+    #join_team_modal{
+        .flex-box{
+            padding: 0;
+        }
+        #position_box{
+            display: block;
+            .item{
+                margin:10px auto;
+                &#empty_box{
+                    margin-left: auto;
+                }
+            }
+        }
+    }
 }
 @media only screen and (max-width: 440px) {
+    .modal{
+        .row{
+            width: 95%;
+        }
+    }
+    
+    .offer-side-bar .promoted{
+        margin: 10px auto;
+    }
     .slider-box{
         .slider{
             .slick-list{
@@ -2440,9 +2481,13 @@ li.gu-transit {
         .offer-side-bar{
             padding: 35px 0;
         }
-    }
-    .decision-list .user-list li, .decision-list .user-list a{
-        margin: 10px 20px 10px 0;
+        .tech-list li{
+            display: block;
+            width: 100%;
+        }
+        .decision-list .user-list li, .decision-list .user-list a{
+            margin: 10px 20px 10px 0;
+        }
     }
     @media only screen and (max-width: 385px) {
         .job-list .job-list-item .little-info{

@@ -1930,6 +1930,7 @@ li.gu-transit {
   order: 1; }
 
 #join_team_modal .flex-box .item#empty_box {
+  margin-left: 50px;
   order: 2; }
 
 #join_team_modal input {
@@ -1938,11 +1939,16 @@ li.gu-transit {
 #join_team_modal .bottom-text {
   color: #a6a6a6; }
 
+@media only screen and (max-width: 1367px) {
+  #join_team_modal {
+    padding: 50px; } }
+
 @media only screen and (max-width: 991px) {
   .only-mobile {
     display: block !important; }
   #dragula_choose_cancel {
     display: flex;
+    margin-top: 10px;
     margin-bottom: 20px; }
   #dragula_choose_box {
     position: fixed;
@@ -2056,6 +2062,8 @@ li.gu-transit {
     max-width: 100%; } }
 
 @media only screen and (max-width: 768px) {
+  #join_team_modal {
+    padding: 10px; }
   .exp-list li .name {
     padding-bottom: 5px; }
   .exp-list li .date {
@@ -2153,9 +2161,25 @@ li.gu-transit {
     text-align: center;
     display: block !important; }
   .offer-main-side .info-box .info-body .btn {
-    margin: 10px auto 0; } }
+    margin: 10px auto 0; }
+  .team-list li {
+    margin: 10px auto !important; } }
+
+@media only screen and (max-width: 540px) {
+  #join_team_modal .flex-box {
+    padding: 0; }
+  #join_team_modal #position_box {
+    display: block; }
+  #join_team_modal #position_box .item {
+    margin: 10px auto; }
+  #join_team_modal #position_box .item#empty_box {
+    margin-left: auto; } }
 
 @media only screen and (max-width: 440px) {
+  .modal .row {
+    width: 95%; }
+  .offer-side-bar .promoted {
+    margin: 10px auto; }
   .slider-box .slider .slick-list {
     margin: 0 auto;
     max-width: 320px; }
@@ -2166,10 +2190,12 @@ li.gu-transit {
   .specialist-row input {
     width: 210px; }
   .offer-side-bar {
-    padding: 35px 0; } }
-
-.decision-list .user-list li, .decision-list .user-list a {
-  margin: 10px 20px 10px 0; }
+    padding: 35px 0; }
+  .tech-list li {
+    display: block;
+    width: 100%; }
+  .decision-list .user-list li, .decision-list .user-list a {
+    margin: 10px 20px 10px 0; } }
 
 @media only screen and (max-width: 385px) {
   .job-list .job-list-item .little-info {
