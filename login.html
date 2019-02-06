@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oops Jobs</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/rangeslider.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <span class="left">
+                <a href="./index.html"><img src="./img/icons/home.png" alt=""></a>
+            </span>
+            <span class="float-right">
+                <!-- <a class="white-btn btn" href="">For employers</a> -->
+                <a class="purple-btn btn" href="./add.html">Dodaj ofertę</a>
+                <a href=""><img src="./img/icons/ring.png" alt=""></a>
+                <a class="user" href="./user.html"><img src="./img/icons/user.png" alt="">John Doe</a>
+            </span>
+        </div>
+        <div class="mobile-top-bar">
+            <div class="first-line">
+                <a href="./index.html"><img src="./img/icons/home.png" alt=""></a>
+                <span class="float-right">
+                    <a href="#"><img src="./img/icons/ring.png" alt=""></a>
+                    <a class="user" href="./user.html"><img src="./img/icons/user.png" alt="">John Doe</a>
+                </span>
+            </div>
+            <div class="second-line text-center">
+                <!-- <a class="white-btn btn" href="">For employers</a> -->
+                <a class="purple-btn btn" href="./add.html">Dodaj ofertę</a>
+            </div>
+
+        </div>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="search-box">
+            <a href="./index.html"><img class="logo" src="./img/logo.png" alt=""></a>
+            <div class="search-bar">
+                <input type="text" placeholder="@Senior Software Developer, Warsaw">
+                <button><img src="./img/icons/settings.png" alt=""></button>
+            </div>
+        </div>
+        <div class="breadcrumbs">
+            <div class="wrapper">
+                <a href="#">Dołącz</a>
+                <a class="active" href="#">Zaloguj się</a>
+            </div>
+        </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="flex-box" id="login">
+                <div class="logo">
+                    <h1>oopsjobs.com</h1>
+                </div>
+                <div class="form">
+                    <h2 class="heading">Zaloguj się by otrzymać najlepsze oferty!</h2>
+                    <form action="">
+                        <label>
+                            <span>Nazwa użytkownika <span class="primary-color">*</span></span>
+                            <input type="text" placeholder="johndoe123">
+                        </label>
+                        <label>
+                            <span>Hasło <span class="primary-color">*</span></span>
+                            <input type="password" placeholder="*************">
+                        </label>
+                        <div class="bottom flex-box">
+                            <div class="socials"></div>
+                            <button class="btn apply-btn">Zaloguj się</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer >
+        <div class="wrapper">
+        <div class="partners">
+            <h2>Najbardziej zaangażowane firmy:</h2>
+            <div class="companies">
+                <img src="./img//partners.png" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <h3>oopsjobs.com</h3>
+                <p>Lorem ipsum dolor sit amet, onseur adipiscing elit. Vivaasdmus aliquam.</p>
+
+                <p>Vivamus placerat, nulla sed sollicitud tempus, libero neque porttitor turpis,
+                vitae vestibulum velit.</p>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h3>Ostatnie oferty</h3>
+                <ul>
+                    <li><a href="#">Junior Ruby on Rails</a></li>
+                    <li><a href="#">Python Developer</a></li>
+                    <li><a href="#">Senior HTML / CSS Dev</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <h3>Lorem ipsum</h3>
+                <ul>
+                    <li><a href="#">Główna</a></li>
+                    <li><a href="#">Giełda projektów</a></li>
+                    <li><a href="#">Oferty pracy</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <h3>Subskrybuj!</h3>
+                <p>
+                    Vivamus placerat, nulla sed sollicitud tempus, libero neque porttitor.
+                </p>
+                <input placeholder="john.doe@gmail.com" type="text"><button><img src="./img//icons/send.png" alt=""></button>
+            </div>
+        </div>
+    </div>
+    </footer>
+            <div class="copyright wrapper">
+                <span>© copyright 2018 oopsjobs.com</span>
+                <span class="float-right">
+                    <a href="#"><img src="./img/icons/facebook-f.svg" alt="facebook"></a>
+                    <a href="#"><img src="./img/icons/google-plus-g.svg" alt="google"></a>
+                    <a href="#"><img src="./img/icons/linkedin-in.svg" alt="linkedin"></a>
+                    <a href="#"><img src="./img/icons/twitter.svg" alt="twitter"></a>
+                </span>
+            </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/rangeslider.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script>$('input[type=range]').rangeslider({
+            polyfill: false
+          })</script>
+</body>
+</html>

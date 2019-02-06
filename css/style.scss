@@ -71,7 +71,7 @@ a{
     right: 30px;
     top: 70px;
     background-color: #fff;
-    border-radius: 24px;
+    border-radius: 4px;
     display: flex;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
@@ -190,12 +190,13 @@ header {
             background-color: rgb(198, 55, 92);
             box-shadow: 0px 15px 15px 0px rgba(114, 74, 140, 0.18);
             width: 100%;
-            border-radius: 25px;
-            padding:8px 0;
+            border-radius: 4px;
+            padding:13px 0;
             background-image: url(../img/icons/search.svg);
             background-position: 10px center;
             background-repeat: no-repeat;
             background-size: 24px;
+            overflow: hidden;
             input{
                 background-color: transparent;
                 color:#fff;
@@ -211,14 +212,18 @@ header {
                 }
             }
             button{
+                position: absolute;
+                top: 13px;
+                right: 0;
+                display: block;
+                height: 100%;
+                width: 100px;
                 cursor: pointer;
                 border: none;
-                background-color: #fff;
+                background-color: #b53f5e;
                 padding:5px 25px;
-                border-radius: 25px;
                 float: right;
-                margin-top: -3px;
-                margin-right: 5px;
+                margin: -13px 0px -13px 0;
             }
         }
     }
@@ -244,7 +249,7 @@ header {
     }
   }
 .btn{
-  padding:7px 20px;
+  padding:7px 40px;
   position: relative;
   font-size: 13px;
   height: 40px;
@@ -280,13 +285,13 @@ a.btn:hover{
 .purple-btn{
     background-color: $primary_color;
     color:#fff;
-    border-radius: 50px;
+    border-radius: 5px;
     .img-side-box{
         background-color: #724A8C;
     }
 }
 .white-btn{
-    border-radius: 50px;
+    border-radius: 5px;
     background-color: #fff;
     color: #b64061;
     &:hover{
@@ -297,14 +302,14 @@ a.btn:hover{
     }
 }
 .lightpurple-btn{
-    padding:5px 20px;
+    padding:2px 30px;
     color:#fff;
     background-color: $primary_color;
-    border-radius: 50px;
+    border-radius: 5px;
 }
 .cancel-btn{
     background-color: $lightgray;
-    border-radius: 50px;
+    border-radius: 5px;
     color: $gray;
     padding: 5px 20px;
     border: 1px solid #ddd;
@@ -400,9 +405,9 @@ a.btn:hover{
     width: 100%;
     max-width: 250px;
     margin: 40px 0;
-    border-radius: 10px;
+    border-radius: 4px;
     box-shadow: 0px 3px 20px 0px rgba(114, 74, 140, 0.18);
-    padding:25px;
+    padding:25px 15px;
     line-height: 20px;
     .heading{
         display: block;
@@ -414,12 +419,12 @@ a.btn:hover{
         outline: none;
         width: 100%;
         border: 1px solid #D7D7D7;
-        border-radius: 25px;
+        border-radius: 4px;
         padding: 10px 50px 10px 20px;
     }
     .custom-radio-box{
         position: relative;
-        color: $gray;
+        color: #000;
         input[type="radio"]{
             opacity: 0;
             cursor: pointer;
@@ -462,7 +467,7 @@ a.btn:hover{
     .purple-btn{
         margin: 0 auto;
         display: block;
-        padding:10px 30px;
+        padding:10px 40px;
     }
     .custom-range{
         .rangeslider--horizontal{
@@ -613,7 +618,7 @@ a.btn:hover{
     .job-list-item{
         border-top: 1px solid #EDEDED;
         border-bottom: 1px solid #EDEDED;
-        border-radius: 25px;
+        border-radius: 4px;
         margin: 15px 0;
         position: relative;
         padding: 13px 3px 0px;
@@ -705,15 +710,19 @@ a.btn:hover{
     h2{
         margin-bottom: 30px;
         .bigger-font{
-            font-size: 38px;
+            font-size: 22px;
             display: block;
+            font-weight: normal;
         }
-        font-size: 28px;
+        font-weight: 800;
+        font-size: 38px;
     }
     input{
         padding: 10px 20px;
-        border-radius: 25px;
+        border-radius: 4px;
         border: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
         background-color: #724A8C;
         width: 395px;
         &::placeholder{
@@ -724,10 +733,11 @@ a.btn:hover{
         background-color: #C6375C;
         border: none;
         outline: none;
-        border-radius: 50%;
-        height: 40px;
+        border-radius: 4px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        height: 39px;
         width: 40px;
-        margin-left: 5px;
         img{
             margin-top: 0;
         }
@@ -756,7 +766,7 @@ a.btn:hover{
         background-color: #A996EE;
     }
     .btn{
-        width: 90px;
+        width: 150px;
         margin: 0 auto;
         .img-side-box{
             background-color: #A996EE;
@@ -792,8 +802,11 @@ footer{
     ul{
         padding:0;
         list-style: none;
-        a{
-            color:#fff;
+        li{
+            padding: 10px 0;
+            a{
+                color:#fff;
+            }
         }
     }
     .row{
@@ -803,8 +816,10 @@ footer{
         }
         input{
             padding: 10px 20px;
-            border-radius: 25px;
+            border-radius: 4px;
             border: none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
             &:focus{
                 outline: none;
             }
@@ -816,10 +831,11 @@ footer{
             background-color: $primary_color;
             border: none;
             outline: none;
-            border-radius: 50%;
+            border-radius: 4px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
             height: 40px;
             width: 40px;
-            margin-left: 5px;
         }
     }
 }
@@ -912,7 +928,7 @@ footer{
     text-align: center;
     justify-content: center;
     color: #fff;
-    border-radius: 50px;
+    border-radius: 5px;
     padding: 5px 40px;
     .img-side-box{
         background-color: #15B360;
@@ -932,7 +948,7 @@ footer{
 .info-box{
     position: relative;
     background-color: #fff;
-    border-radius: 20px;
+    border-radius: 4px;
     box-shadow: 0px 3px 20px 0px rgba(114, 74, 140, 0.18);
     padding: 10px 20px;
     margin: 10px 5px;

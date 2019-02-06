@@ -64,7 +64,7 @@ a:hover {
   right: 30px;
   top: 70px;
   background-color: #fff;
-  border-radius: 24px;
+  border-radius: 4px;
   display: flex;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
@@ -177,12 +177,13 @@ header .search-box .search-bar {
   background-color: #c6375c;
   box-shadow: 0px 15px 15px 0px rgba(114, 74, 140, 0.18);
   width: 100%;
-  border-radius: 25px;
-  padding: 8px 0;
+  border-radius: 4px;
+  padding: 13px 0;
   background-image: url(../img/icons/search.svg);
   background-position: 10px center;
   background-repeat: no-repeat;
-  background-size: 24px; }
+  background-size: 24px;
+  overflow: hidden; }
 
 header .search-box .search-bar input {
   background-color: transparent;
@@ -199,14 +200,18 @@ header .search-box .search-bar input::placeholder {
   opacity: 1; }
 
 header .search-box .search-bar button {
+  position: absolute;
+  top: 13px;
+  right: 0;
+  display: block;
+  height: 100%;
+  width: 100px;
   cursor: pointer;
   border: none;
-  background-color: #fff;
+  background-color: #b53f5e;
   padding: 5px 25px;
-  border-radius: 25px;
   float: right;
-  margin-top: -3px;
-  margin-right: 5px; }
+  margin: -13px 0px -13px 0; }
 
 header nav {
   border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -229,7 +234,7 @@ header nav ul li.active {
   border-bottom: 3px solid #8E77E1; }
 
 .btn {
-  padding: 7px 20px;
+  padding: 7px 40px;
   position: relative;
   font-size: 13px;
   height: 40px;
@@ -265,13 +270,13 @@ a.btn:hover {
 .purple-btn {
   background-color: #8E77E1;
   color: #fff;
-  border-radius: 50px; }
+  border-radius: 5px; }
 
 .purple-btn .img-side-box {
   background-color: #724A8C; }
 
 .white-btn {
-  border-radius: 50px;
+  border-radius: 5px;
   background-color: #fff;
   color: #b64061; }
 
@@ -282,14 +287,14 @@ a.btn:hover {
   background-color: #FBF9FB; }
 
 .lightpurple-btn {
-  padding: 5px 20px;
+  padding: 2px 30px;
   color: #fff;
   background-color: #8E77E1;
-  border-radius: 50px; }
+  border-radius: 5px; }
 
 .cancel-btn {
   background-color: #e5e5e5;
-  border-radius: 50px;
+  border-radius: 5px;
   color: #a6a6a6;
   padding: 5px 20px;
   border: 1px solid #ddd; }
@@ -385,9 +390,9 @@ a.btn:hover {
   width: 100%;
   max-width: 250px;
   margin: 40px 0;
-  border-radius: 10px;
+  border-radius: 4px;
   box-shadow: 0px 3px 20px 0px rgba(114, 74, 140, 0.18);
-  padding: 25px;
+  padding: 25px 15px;
   line-height: 20px; }
 
 .filters .heading {
@@ -400,12 +405,12 @@ a.btn:hover {
   outline: none;
   width: 100%;
   border: 1px solid #D7D7D7;
-  border-radius: 25px;
+  border-radius: 4px;
   padding: 10px 50px 10px 20px; }
 
 .filters .custom-radio-box {
   position: relative;
-  color: #a6a6a6; }
+  color: #000; }
 
 .filters .custom-radio-box input[type="radio"] {
   opacity: 0;
@@ -444,7 +449,7 @@ a.btn:hover {
 .filters .purple-btn {
   margin: 0 auto;
   display: block;
-  padding: 10px 30px; }
+  padding: 10px 40px; }
 
 .filters .custom-range {
   height: 16px;
@@ -588,7 +593,7 @@ a.btn:hover {
 .job-list .job-list-item {
   border-top: 1px solid #EDEDED;
   border-bottom: 1px solid #EDEDED;
-  border-radius: 25px;
+  border-radius: 4px;
   margin: 15px 0;
   position: relative;
   padding: 13px 3px 0px;
@@ -677,16 +682,20 @@ a.btn:hover {
 
 .specialist-row h2 {
   margin-bottom: 30px;
-  font-size: 28px; }
+  font-weight: 800;
+  font-size: 38px; }
 
 .specialist-row h2 .bigger-font {
-  font-size: 38px;
-  display: block; }
+  font-size: 22px;
+  display: block;
+  font-weight: normal; }
 
 .specialist-row input {
   padding: 10px 20px;
-  border-radius: 25px;
+  border-radius: 4px;
   border: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #724A8C;
   width: 395px; }
 
@@ -697,10 +706,11 @@ a.btn:hover {
   background-color: #C6375C;
   border: none;
   outline: none;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  margin-left: 5px; }
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  height: 39px;
+  width: 40px; }
 
 .specialist-row button img {
   margin-top: 0; }
@@ -728,7 +738,7 @@ a.btn:hover {
   background-color: #A996EE; }
 
 #about .btn {
-  width: 90px;
+  width: 150px;
   margin: 0 auto; }
 
 #about .btn .img-side-box {
@@ -765,7 +775,10 @@ footer ul {
   padding: 0;
   list-style: none; }
 
-footer ul a {
+footer ul li {
+  padding: 10px 0; }
+
+footer ul li a {
   color: #fff; }
 
 footer .row {
@@ -776,8 +789,10 @@ footer .row div {
 
 footer .row input {
   padding: 10px 20px;
-  border-radius: 25px;
-  border: none; }
+  border-radius: 4px;
+  border: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
 
 footer .row input:focus {
   outline: none; }
@@ -789,10 +804,11 @@ footer .row button {
   background-color: #8E77E1;
   border: none;
   outline: none;
-  border-radius: 50%;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
   height: 40px;
-  width: 40px;
-  margin-left: 5px; }
+  width: 40px; }
 
 .copyright {
   font-size: 13px;
@@ -876,7 +892,7 @@ footer .row button {
   text-align: center;
   justify-content: center;
   color: #fff;
-  border-radius: 50px;
+  border-radius: 5px;
   padding: 5px 40px; }
 
 .apply-btn .img-side-box {
@@ -888,7 +904,7 @@ footer .row button {
 .info-box {
   position: relative;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 4px;
   box-shadow: 0px 3px 20px 0px rgba(114, 74, 140, 0.18);
   padding: 10px 20px;
   margin: 10px 5px;
