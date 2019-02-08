@@ -65,11 +65,11 @@
                     <form id="login_form" action="">
                         <label>
                             <span>Nazwa użytkownika <span class="primary-color">*</span></span>
-                            <input type="text" placeholder="johndoe123" name="login">
+                            <input class="login-input" type="text" placeholder="johndoe123" name="login">
                         </label>
                         <label>
                             <span>Hasło <span class="primary-color">*</span></span>
-                            <input type="password" placeholder="*************" name="password">
+                            <input class="login-input" type="password" placeholder="*************" name="password">
                         </label>
                         <div class="bottom flex-box">
                             <div class="socials">
@@ -93,7 +93,7 @@
                 </div>
             </div>
         </div>
-        <div id="register_modal" class="modal visible">
+        <div id="register_modal" class="modal">
             <div class="flex-box info-box bold-top-purple">
                 <div class="purple-side">
                     <h1>oopsjobs.com</h1>
@@ -101,36 +101,66 @@
                     <p class="bottom">Poprzez kliknięcie 'Załóż konto' powyżej, oświadczasz że przeczytałeś i zgadzasz się z <a href="">Regulaminem serwisu</a> oraz <a href="">Polityką prywatności</a></p>
                 </div>
                 <div class="form-side">
-                    <h2>Załóż darmowe konto</h2>
+                    <h4 class="heading">Załóż darmowe konto</h4>
                     <div class="circle-btn close-btn modal-dismiss"></div>
                     <form id="register_form" action="">
                         <label>
-                            <span>Typ użytkownika <span class="primary-color">*</span></span>
-                            <input type="radio" name='user_type'>
-                            <span>Deweloper</span>
-                            <input type="radio" name='user_type'>
-                            <span>Klient</span>
+                            <span class="label-heading">Typ użytkownika <span class="primary-color">*</span></span>
+                            <fieldset>
+                                <label class="custom-radio-box">
+                                    <input type="radio" name='user_type'>
+                                    <span class="custom-mark"></span>
+                                    <span>Deweloper</span>
+                                </label>
+                                <label class="custom-radio-box">
+                                    <input type="radio" name='user_type'>
+                                    <span class="custom-mark"></span>
+                                    <span>Klient</span>
+                                </label>
+                            </fieldset>
                         </label>
-                        <fieldset>
+                        <fieldset class="name-surname">
                             <label>
-                                <span>Imię <span class="primary-color">*</span></span>
-                                <input type="text" name="name">                            
+                                <span class="label-heading">Imię <span class="primary-color">*</span></span>
+                                <input placeholder="John" class="login-input" type="text" name="name">
                             </label>
                             <label>
-                                <span>Nazwisko <span class="primary-color">*</span></span>
-                                <input type="text" name="surname">                            
+                                <span class="label-heading">Nazwisko <span class="primary-color">*</span></span>
+                                <input placeholder="Doe" class="login-input" type="text" name="surname">
                             </label>
                         </fieldset>
                         <label>
-                            <span>Email <span class="primary-color">*</span></span>
-                            <input type="text" name="surname">                            
+                            <span class="label-heading">Email <span class="primary-color">*</span></span>
+                            <input placeholder="johndoe123@gmail.com" class="login-input" type="text" name="email">
                         </label>
                         <label>
-                            <span>Hasło <span class="primary-color">*</span></span>
-                            <input type="text" name="surname">                            
+                            <span class="label-heading">Hasło <span class="primary-color">*</span></span>
+                            <input placeholder="************" class="login-input" type="text" name="password">
                         </label>
                         <div class="bottom">
                             <a href="#">Regulamin</a>
+                            <input type="submit" value="Załóż konto" class="btn apply-btn">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="forgot_password_modal" class="modal">
+            <div class="flex-box info-box bold-top-purple">
+                <div class="purple-side">
+                    <h1>oopsjobs.com</h1>
+                </div>
+                <div class="form-side">
+                    <h4 class="heading">Zapomniałeś hasła?</h4>
+                    <p>Poprzez kliknięcie 'Załóż konto' powyżej, oświadczasz że przeczytałeś i zgadzasz się z <a href="">Regulaminem serwisu</a> oraz <a href="">Polityką prywatności</a></p>
+                    <div class="circle-btn close-btn modal-dismiss"></div>
+                    <form id="forgot_password_form" action="">
+
+                        <label>
+                            <span class="label-heading">Email <span class="primary-color">*</span></span>
+                            <input placeholder="johndoe123@gmail.com" class="login-input" type="text" name="email">
+                        </label>
+                        <div class="bottom">
                             <input type="submit" value="Załóż konto" class="btn apply-btn">
                         </div>
                     </form>

@@ -336,6 +336,7 @@ a.btn:hover{
     background-size: 12px 12px;
     position: absolute;
     right: 15px;
+    top: 20px;
     cursor: pointer;
 }
 .outline-btn{
@@ -446,7 +447,7 @@ a.btn:hover{
         border-radius: 4px;
         padding: 10px 50px 10px 20px;
     }
-    
+
 
     .text-input{
         img{
@@ -2168,6 +2169,14 @@ li.gu-transit {
 
 // PROJECT END
 // LOGIN START
+.login-input{
+    margin-top: 5px;
+    display: block;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #eee;
+    box-shadow: 3px 6px 10px rgba(114, 74, 140, 0.18);
+}
 #login{
     margin: 30px 0;
     justify-content: center;
@@ -2193,14 +2202,7 @@ li.gu-transit {
             span{
                 font-weight: bold;
             }
-            input{
-                margin-top: 5px;
-                display: block;
-                padding: 10px;
-                width: 100%;
-                border: 1px solid #eee;
-                box-shadow: 3px 6px 10px rgba(114, 74, 140, 0.18);
-            }
+
         }
         .bottom{
             padding-top: 20px;
@@ -2248,22 +2250,131 @@ li.gu-transit {
         }
     }
 }
-#register_modal{
+#register_modal, #forgot_password_modal{
     >div{
-        margin: 100px auto;
         position: relative;
-        max-width: 720px;
+        padding: 0!important;
+        margin: 200px auto;
+        position: relative;
+        max-width: 820px;
         width: 100%;
     }
-    
+    .purple-side{
+        padding: 30px;
+        min-width: 40%;
+        background-color: $primary_color;
+        color: #fff;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        h1{
+            padding-top: 130px;
+            font-size: 32px;
+        }
+        p{
+            font-size: 11px;
+            a{
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+        .bottom{
+            padding-top: 80px;
+
+        }
+    }
+    .form-side{
+        min-width: 60%;
+        text-align: left;
+        padding: 30px;
+        label{
+            display: block;
+            .label-heading{
+                font-weight: bold;
+                font-size: 13px;
+                display: block;
+            }
+        }
+        fieldset{
+            label{
+                width: 100%;
+            }
+            display: flex;
+            label:last-child{
+                margin-left: 10px;
+            }
+            .custom-radio-box{
+                width: 25%;
+            }
+        }
+        .bottom{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            a{
+                color: $gray;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+#forgot_password_modal{
+    .purple-side{
+        justify-content: center;
+        h1{
+            padding: 0;
+        }
+    }
+    .form-side{
+        p{
+            padding: 10px 30px 15px 0;
+            font-size: 11px;
+            color: $gray;
+            a{
+                color: $gray;
+                text-decoration: underline;
+            }
+        }
+        .bottom{
+            justify-content: flex-end;
+        }
+        label{
+            padding-bottom: 20px;
+        }
+    }
 }
 // LOGIN END
 @media only screen and (max-width: 1367px) {
     #join_team_modal{
         padding: 50px;
     }
+    #login{
+        .logo{
+            width: 30%;
+        }
+    }
 }
 @media only screen and (max-width: 991px) {
+    #login{
+        display: block;
+        >div{
+            margin: 0 auto;
+        }
+        .logo{
+            text-align: center;
+            margin-top: 50px;
+            width: 100%;
+            h1{margin: 0;}
+        }
+        .form{
+            padding: 50px 0;
+            border: none;
+            max-width: 500px;
+            width: 90%;
+        }
+    }
     .only-mobile{
         display: block!important;
     }
@@ -2436,6 +2547,17 @@ li.gu-transit {
     }
 }
 @media only screen and (max-width: 768px) {
+    #forgot_password_modal, #register_modal{
+        >div{
+            width: 90%;
+        }
+        .purple-side{
+            display: none;
+        }
+        .form-side{
+            width: 100%;
+        }
+    }
     #join_team_modal{
         padding: 10px;
     }
@@ -2613,10 +2735,25 @@ li.gu-transit {
         li{
             margin: 10px auto!important;
         }
-        
+
     }
 }
 @media only screen and (max-width: 540px) {
+        #register_modal{
+        .form-side{
+            .name-surname{
+                display: block;
+                label:last-child{
+                    margin-left: 0;
+                }
+            }
+            fieldset{
+                .custom-radio-box{
+                    width: 50%;
+                }
+            }
+        }
+    }
     #join_team_modal{
         .flex-box{
             padding: 0;
@@ -2638,7 +2775,7 @@ li.gu-transit {
             width: 95%;
         }
     }
-    
+
     .offer-side-bar .promoted{
         margin: 10px auto;
     }
