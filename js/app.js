@@ -85,6 +85,11 @@ $('.modal-dismiss').click(function(){
     $(modal).toggleClass('visible');
     $('body').removeClass('freeze');
 })
+// SIDEBAR MODAL
+$('.sidebar-dissmis').click(function(){
+    $('#hr_sidebar').toggleClass('visible');
+    $('body').removeClass('freeze');
+})
 
 //RESET MODAL
 $('.modal-reseter').click(function(){

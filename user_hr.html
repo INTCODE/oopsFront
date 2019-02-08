@@ -15,6 +15,7 @@
     <header>
         <div class="top-bar">
             <span class="left">
+                <a class="modal-toggler" data-toggle="#hr_sidebar"><img src="./img/icons/bars.svg" alt=""></a>
                 <a><img src="./img/icons/home.png" alt=""></a>
             </span>
             <span class="float-right">
@@ -485,6 +486,48 @@
                 </div>
             </div>
         </div>
+        <div id="hr_sidebar">
+            <div class="modal-mask"></div>
+            <div class="sidebar-content">
+                <button class="sidebar-dissmis" id="close_sidebar"><img src="./img/icons/cross_black.svg" alt=""></button>
+                <div class="user">
+                    <div class="avatar">
+                        <img src="./img/avatars/user2.png" alt="">
+                    </div>
+                    <div class="name">
+                        Katarzyna Doe
+                    </div>
+                </div>
+                <a href="#">Zarządzaj kontem</a>
+                <form action="">
+                    <p class="heading">Dodane oferty:</p>
+                    <label class="custom-radio-box">
+                        <input type="radio" name="added_offer"> <span class="custom-mark"></span>
+                          Wszystkie (48)
+                    </label>
+                    <label class="custom-radio-box">
+                        <input type="radio" name="added_offer"> <span class="custom-mark"></span>
+                          Projekty (3)
+                    </label>
+                    <label class="custom-radio-box">
+                        <input type="radio" name="added_offer"> <span class="custom-mark"></span>
+                          Oferty pracy (45)
+                    </label>
+                    <button class="lightpurple-btn btn">+ dodaj</button>
+                    <p class="heading">Odpowiedzi użytkowników</p>
+                    <label class="custom-radio-box">
+                        <input type="radio" name="users_answers"> <span class="custom-mark"></span>
+                          Wszystkie (143)
+                    </label>
+                    <label class="custom-radio-box">
+                        <input type="radio" name="users_answers"> <span class="custom-mark"></span>
+                          Zaakceptowane (75)
+                    </label>
+                </form>
+                <a id='user_settings' href="#">Ustawienia konta</a>
+            </div>
+        </div>
+
     </main>
     <footer>
         <div class="wrapper">

@@ -386,6 +386,29 @@ a.btn:hover {
   cursor: pointer;
   outline: none; }
 
+.custom-radio-box {
+  position: relative;
+  color: #000; }
+
+.custom-radio-box input[type="radio"] {
+  opacity: 0;
+  cursor: pointer;
+  margin-left: 5px; }
+
+.custom-radio-box input[type="radio"]:checked ~ .custom-mark {
+  background-image: url("../img/thumb.svg"); }
+
+.custom-radio-box .custom-mark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  background-image: url("../img/circle.svg");
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer; }
+
 .filters {
   background-color: #fff;
   width: 100%;
@@ -408,29 +431,6 @@ a.btn:hover {
   border: 1px solid #D7D7D7;
   border-radius: 4px;
   padding: 10px 50px 10px 20px; }
-
-.filters .custom-radio-box {
-  position: relative;
-  color: #000; }
-
-.filters .custom-radio-box input[type="radio"] {
-  opacity: 0;
-  cursor: pointer;
-  margin-left: 5px; }
-
-.filters .custom-radio-box input[type="radio"]:checked ~ .custom-mark {
-  background-image: url("../img/thumb.svg"); }
-
-.filters .custom-radio-box .custom-mark {
-  position: absolute;
-  top: 4px;
-  left: 0;
-  width: 13px;
-  height: 13px;
-  background-image: url("../img/circle.svg");
-  display: inline-block;
-  border-radius: 50%;
-  cursor: pointer; }
 
 .filters .text-input img {
   position: absolute;
@@ -869,7 +869,8 @@ footer .row button {
   float: right; }
 
 .offer-side-bar .heading {
-  font-size: 18px;
+  font-size: 16px;
+  padding-left: 20px;
   font-weight: 600;
   color: #333; }
 
@@ -1367,7 +1368,7 @@ ul {
   max-width: 470px; }
 
 .connect .skills-list li .text {
-  width: 45%; }
+  width: 25%; }
 
 .connect .info-footer {
   color: #a6a6a6;
@@ -1757,7 +1758,7 @@ ul {
   background-color: #fff;
   padding: 20px;
   margin: 10px 0;
-  border-radius: 25px;
+  border-radius: 4px;
   align-items: center;
   position: relative; }
 
@@ -1775,6 +1776,82 @@ li.gu-transit {
 
 #dragula_right .recommended-user {
   cursor: pointer; }
+
+.sidebar-content {
+  overflow: hidden;
+  z-index: 12;
+  width: 90%;
+  max-width: 330px;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 30px 15px;
+  transition: 300ms; }
+
+.sidebar-content a {
+  font-weight: bold; }
+
+.sidebar-content #close_sidebar {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: none; }
+
+.sidebar-content #close_sidebar img {
+  height: 15px;
+  width: 15px; }
+
+.sidebar-content .user {
+  display: flex;
+  align-items: center; }
+
+.sidebar-content .user .name {
+  font-weight: bold; }
+
+.sidebar-content form {
+  margin: 0 -15px;
+  padding: 30px 0 30px 15px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5; }
+
+.sidebar-content form .heading {
+  font-weight: 600; }
+
+.sidebar-content form label {
+  display: block; }
+
+.sidebar-content form .lightpurple-btn {
+  padding: 0px 20px;
+  height: 35px;
+  margin-bottom: 30px; }
+
+.sidebar-content #user_settings {
+  color: #333;
+  display: block;
+  margin-top: 30px; }
+
+.modal-mask {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh; }
+
+#hr_sidebar {
+  display: block !important; }
+
+#hr_sidebar.visible .modal-mask {
+  display: block; }
+
+#hr_sidebar.visible .sidebar-content {
+  left: 0; }
 
 .tech-list {
   border-bottom: 2px solid #e5e5e5;
@@ -1849,6 +1926,9 @@ li.gu-transit {
 
 .team-list li .text button, .team-list li .text a {
   margin: 10px auto 0; }
+
+.modal-toggler {
+  cursor: pointer; }
 
 .modal {
   background-color: rgba(0, 0, 0, 0.5);
