@@ -1916,14 +1916,22 @@ li.gu-transit {
         background:none;
         border:none;
         img{
-            height: 15px;
-            width: 15px;
+            height: 10px;
+            width: 10px;
         }
     }
     .user{
         display: flex;
         align-items: center;
+        margin: 15px 0;
+        .avatar{
+            img{
+                height: 60px;
+                width: 60px;
+            }
+        }
         .name{
+            padding-left: 10px;
             font-weight: bold;
         }
     }
@@ -1953,20 +1961,21 @@ li.gu-transit {
 .modal-mask{
     display: none;
     background-color: rgba($color: #000000, $alpha: .5);
-    position: fixed;
+    position: fixed!important;
     z-index: 11;
     top: 0;
     right: 0;
     width: 100vw;
     height: 100vh;
+    &.visible{
+        display: block;
+    }
 }
 #hr_sidebar{
     display: block!important;
 }
 #hr_sidebar.visible{
-    .modal-mask{
-        display: block;
-    }
+    
     .sidebar-content{
         left: 0;
     }
@@ -2057,11 +2066,27 @@ li.gu-transit {
 .modal-toggler{
     cursor: pointer;
 }
+@keyframes slide{
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .modal{
-    background-color: rgba(0, 0, 0, .5);
     overflow-y: auto;
     text-align: center;
-
+    >div:not(.modal-mask){
+        z-index: 12;
+    }
+    &.visible >div:not(.modal-mask){
+        transition: 500ms;
+        animation-name: slide;
+        animation-duration: 500ms;
+    }
     .row{
         margin: 10px auto 0;
         width: 80%;
@@ -2251,7 +2276,8 @@ li.gu-transit {
     }
 }
 #register_modal, #forgot_password_modal{
-    >div{
+    >div:not(.modal-mask){
+        z-index: 12;
         position: relative;
         padding: 0!important;
         margin: 200px auto;
@@ -2544,6 +2570,9 @@ li.gu-transit {
                 max-width: 100%;
             }
         }
+    }
+    .decision-list .user-list a{
+        width: 98%;
     }
 }
 @media only screen and (max-width: 768px) {

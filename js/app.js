@@ -76,6 +76,7 @@ $('#more_text_trigger').click(function(){
 $('.modal-toggler').click(function(){
     var modal = $(this).data('toggle');
     $(modal).toggleClass('visible');
+    $(modal+' .modal-mask').toggleClass('visible');
     $('body').addClass('freeze');
 })
 
@@ -83,11 +84,13 @@ $('.modal-toggler').click(function(){
 $('.modal-dismiss').click(function(){
     var modal = $(this).closest('.modal');
     $(modal).toggleClass('visible');
+    $(modal.prevObject[0]).toggleClass('visible');
     $('body').removeClass('freeze');
 })
 // SIDEBAR MODAL
 $('.sidebar-dissmis').click(function(){
     $('#hr_sidebar').toggleClass('visible');
+    $('#hr_sidebar .modal-mask').toggleClass('visible');
     $('body').removeClass('freeze');
 })
 

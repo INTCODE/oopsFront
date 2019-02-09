@@ -1803,14 +1803,20 @@ li.gu-transit {
   border: none; }
 
 .sidebar-content #close_sidebar img {
-  height: 15px;
-  width: 15px; }
+  height: 10px;
+  width: 10px; }
 
 .sidebar-content .user {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  margin: 15px 0; }
+
+.sidebar-content .user .avatar img {
+  height: 60px;
+  width: 60px; }
 
 .sidebar-content .user .name {
+  padding-left: 10px;
   font-weight: bold; }
 
 .sidebar-content form {
@@ -1838,18 +1844,18 @@ li.gu-transit {
 .modal-mask {
   display: none;
   background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
+  position: fixed !important;
   z-index: 11;
   top: 0;
   right: 0;
   width: 100vw;
   height: 100vh; }
 
+.modal-mask.visible {
+  display: block; }
+
 #hr_sidebar {
   display: block !important; }
-
-#hr_sidebar.visible .modal-mask {
-  display: block; }
 
 #hr_sidebar.visible .sidebar-content {
   left: 0; }
@@ -1931,10 +1937,25 @@ li.gu-transit {
 .modal-toggler {
   cursor: pointer; }
 
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateY(-100px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
 .modal {
-  background-color: rgba(0, 0, 0, 0.5);
   overflow-y: auto;
   text-align: center; }
+
+.modal > div:not(.modal-mask) {
+  z-index: 12; }
+
+.modal.visible > div:not(.modal-mask) {
+  transition: 500ms;
+  animation-name: slide;
+  animation-duration: 500ms; }
 
 .modal .row {
   margin: 10px auto 0;
@@ -2117,7 +2138,8 @@ li.gu-transit {
   font-size: 12px;
   font-weight: 600; }
 
-#register_modal > div, #forgot_password_modal > div {
+#register_modal > div:not(.modal-mask), #forgot_password_modal > div:not(.modal-mask) {
+  z-index: 12;
   position: relative;
   padding: 0 !important;
   margin: 200px auto;
@@ -2342,7 +2364,9 @@ li.gu-transit {
   .requirements .row {
     display: block; }
   .requirements .row .col-md-4 {
-    max-width: 100%; } }
+    max-width: 100%; }
+  .decision-list .user-list a {
+    width: 98%; } }
 
 @media only screen and (max-width: 768px) {
   #forgot_password_modal > div, #register_modal > div {
